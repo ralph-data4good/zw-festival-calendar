@@ -1,0 +1,35 @@
+[
+  {
+    "id": "partner-001",
+    "name": "Zero Waste Asia",
+    "logo": "",
+    "website": "https://zerowaste.asia",
+    "type": "Network",
+    "description": "Regional network of zero waste organizations"
+  },
+  {
+    "id": "partner-002",
+    "name": "Ellen MacArthur Foundation",
+    "logo": "",
+    "website": "https://ellenmacarthurfoundation.org",
+    "type": "Foundation",
+    "description": "Leading circular economy thought leadership"
+  },
+  {
+    "id": "partner-003",
+    "name": "UNEP",
+    "logo": "",
+    "website": "https://www.unep.org",
+    "type": "UN Agency",
+    "description": "United Nations Environment Programme"
+  },
+  {
+    "id": "partner-004",
+    "name": "GAIA",
+    "logo": "",
+    "website": "https://www.no-burn.org",
+    "type": "NGO",
+    "description": "Global Alliance for Incinerator Alternatives"
+  }
+]
+

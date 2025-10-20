@@ -1,0 +1,35 @@
+[
+  {
+    "id": "org-001",
+    "name": "Zero Waste Manila",
+    "country": "Philippines",
+    "website": "https://zerowaste.ph",
+    "email": "contact@zerowaste.ph",
+    "description": "Leading zero waste organization in the Philippines"
+  },
+  {
+    "id": "org-002",
+    "name": "Zero Waste SG",
+    "country": "Singapore",
+    "website": "https://zerowastesg.com",
+    "email": "hello@zerowastesg.com",
+    "description": "Singapore's premier zero waste advocacy group"
+  },
+  {
+    "id": "org-003",
+    "name": "Trash Hero Phuket",
+    "country": "Thailand",
+    "website": "https://trashhero.org",
+    "email": "phuket@trashhero.org",
+    "description": "Community-led cleanup initiatives across Thailand"
+  },
+  {
+    "id": "org-004",
+    "name": "Circular Economy Asia",
+    "country": "Regional",
+    "website": "https://circulareconomy.asia",
+    "email": "info@circulareconomy.asia",
+    "description": "Advancing circular economy in Asia Pacific"
+  }
+]
+

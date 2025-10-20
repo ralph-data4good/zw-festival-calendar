@@ -1,0 +1,43 @@
+[
+  {
+    "id": "izwm-2025",
+    "name": "International Zero Waste Month 2025",
+    "emoji": "🌍",
+    "description": "The flagship global campaign celebrating zero waste throughout July",
+    "featured": true,
+    "start_date": "2025-07-01",
+    "end_date": "2025-07-31",
+    "website": "https://zerowaste.asia/izwm"
+  },
+  {
+    "id": "plastic-free-july",
+    "name": "Plastic Free July",
+    "emoji": "🚫",
+    "description": "Challenge yourself to refuse single-use plastics",
+    "featured": true,
+    "start_date": "2025-07-01",
+    "end_date": "2025-07-31",
+    "website": "https://plasticfreejuly.org"
+  },
+  {
+    "id": "world-ocean-day",
+    "name": "World Ocean Day",
+    "emoji": "🌊",
+    "description": "Protecting our oceans from plastic pollution",
+    "featured": true,
+    "start_date": "2025-06-08",
+    "end_date": "2025-06-08",
+    "website": "https://worldoceanday.org"
+  },
+  {
+    "id": "zero-waste-week",
+    "name": "Zero Waste Week",
+    "emoji": "♻️",
+    "description": "Annual week of waste reduction action",
+    "featured": false,
+    "start_date": "2025-09-01",
+    "end_date": "2025-09-07",
+    "website": "https://zerowasteweek.co.uk"
+  }
+]
+
