@@ -1,0 +1,98 @@
+.filters {
+  background: #fff;
+  border: 1px solid var(--line-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.toggleBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--izwm-cream);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.toggleBtn:hover {
+  background: var(--line-200);
+}
+
+.activeBadge {
+  color: var(--accent-navy);
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+
+.filtersContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filterHeader h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filterGroup label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--ink-900);
+}
+
+.input,
+.select {
+  padding: 10px 12px;
+  border: 2px solid var(--line-200);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--accent-navy);
+  box-shadow: 0 0 0 3px rgba(46, 91, 167, 0.1);
+}
+
+.select {
+  cursor: pointer;
+}
+
+.topicsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 1023px) {
+  .filters {
+    position: sticky;
+    top: 80px;
+    z-index: 50;
+  }
+}
+

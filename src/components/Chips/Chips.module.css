@@ -1,0 +1,11 @@
+.chipsContainer {
+  margin-bottom: 32px;
+}
+
+.chipsTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--ink-900);
+}
+

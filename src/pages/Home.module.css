@@ -1,0 +1,289 @@
+.home {
+  min-height: 100vh;
+}
+
+.hero {
+  background: var(--izwm-brick);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.heroInner {
+  display: grid;
+  gap: 40px;
+  padding: clamp(48px, 8vw, 80px) 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .heroInner {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  opacity: 0.95;
+  max-width: 600px;
+}
+
+.heroCta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.heroCta .btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+}
+
+.heroPanel {
+  background: var(--izwm-cream);
+  color: var(--ink-900);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.panelTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: var(--izwm-brick);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statValue {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--accent-navy);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--ink-600);
+  font-weight: 600;
+}
+
+/* How It Works Section */
+.howItWorks {
+  padding: clamp(60px, 10vw, 100px) 0;
+  background: linear-gradient(to bottom, #fff 0%, var(--izwm-cream) 100%);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--ink-900);
+  margin: 0 0 48px 0;
+}
+
+.stepsGrid {
+  display: grid;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-navy);
+}
+
+.stepNumber {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--accent-navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(46, 91, 167, 0.3);
+  flex-shrink: 0;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.stepDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-600);
+  margin: 0;
+}
+
+.stepLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-navy);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.stepLink:hover {
+  gap: 10px;
+  text-decoration: underline;
+}
+
+/* Events Section */
+.eventsSection {
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+
+.eventBlock {
+  margin-bottom: 60px;
+}
+
+.eventBlock:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .heroCta {
+    flex-direction: column;
+  }
+
+  .heroCta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats {
+    gap: 16px;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 0.75rem;
+  }
+
+  .stepsGrid {
+    gap: 24px;
+  }
+
+  .step {
+    padding: 24px;
+  }
+
+  .stepNumber {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .stepTitle {
+    font-size: 1.25rem;
+  }
+
+  .stepDescription {
+    font-size: 0.95rem;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+}

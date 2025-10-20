@@ -1,0 +1,43 @@
+[
+  {
+    "id": "workshop",
+    "name": "Workshop",
+    "description": "Hands-on learning experiences"
+  },
+  {
+    "id": "cleanup",
+    "name": "Cleanup",
+    "description": "Community cleanup events"
+  },
+  {
+    "id": "webinar",
+    "name": "Webinar",
+    "description": "Online educational sessions"
+  },
+  {
+    "id": "conference",
+    "name": "Conference",
+    "description": "Multi-day conferences and summits"
+  },
+  {
+    "id": "campaign-launch",
+    "name": "Campaign Launch",
+    "description": "Kickoff events for awareness campaigns"
+  },
+  {
+    "id": "marketplace",
+    "name": "Marketplace",
+    "description": "Sustainable product markets and swaps"
+  },
+  {
+    "id": "film-screening",
+    "name": "Film Screening",
+    "description": "Documentary screenings and discussions"
+  },
+  {
+    "id": "training",
+    "name": "Training",
+    "description": "Professional skill development"
+  }
+]
+

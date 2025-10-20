@@ -1,0 +1,120 @@
+.mapPickerWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.mapContainer {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--line-200);
+  cursor: crosshair;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.mapContainer:hover:not(.disabled) {
+  border-color: var(--zw-blue);
+}
+
+.mapContainer:focus {
+  border-color: var(--zw-blue);
+  box-shadow: 0 0 0 3px rgba(74, 143, 199, 0.1);
+}
+
+.mapContainer.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.disabledOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.disabledOverlay p {
+  padding: 12px 24px;
+  background: white;
+  border: 2px solid var(--line-200);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--ink-600);
+  box-shadow: var(--shadow-sm);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: var(--zw-cream);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--ink-600);
+  border-left: 3px solid var(--zw-blue);
+}
+
+.hint svg {
+  flex-shrink: 0;
+  color: var(--zw-blue);
+}
+
+/* MapLibre GL overrides for better branding */
+:global(.maplibregl-marker) {
+  cursor: pointer;
+}
+
+:global(.maplibregl-ctrl-attrib) {
+  background: rgba(255, 255, 255, 0.9) !important;
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+}
+
+:global(.maplibregl-ctrl-attrib a) {
+  color: var(--zw-blue) !important;
+  text-decoration: none !important;
+}
+
+:global(.maplibregl-ctrl-attrib a:hover) {
+  text-decoration: underline !important;
+}
+
+:global(.maplibregl-ctrl-group) {
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--line-200) !important;
+}
+
+:global(.maplibregl-ctrl-group button) {
+  border: none !important;
+}
+
+:global(.maplibregl-ctrl-group button:hover) {
+  background: var(--zw-cream) !important;
+}
+
+@media (max-width: 768px) {
+  .mapContainer {
+    height: 300px !important;
+  }
+
+  .hint {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+

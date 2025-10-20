@@ -1,0 +1,30 @@
+{
+  "name": "zero-waste-festival-2025",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Zero Waste Festival 2025 - Mobile-first React App",
+  "homepage": "https://ralph-data4good.github.io/zw-festival-calendar/",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "generate-test-data": "node scripts/generate-test-data.js",
+    "generate-mvp-data": "node scripts/generate-mvp-data.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.75.1",
+    "dayjs": "^1.11.10",
+    "maplibre-gl": "^3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.0",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.3.0",
+    "vite": "^5.1.0"
+  }
+}

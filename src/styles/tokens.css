@@ -1,0 +1,41 @@
+:root {
+  /* Zero Waste Festival Brand Colors (from logo) */
+  --zw-lime: #A4BF3D;      /* Lime green from "ZERO" */
+  --zw-blue: #4A8FC7;       /* Blue from "WASTE" and circle */
+  --zw-green: #5B8C5A;      /* Dark green from globe */
+  --zw-cream: #F5F3ED;      /* Soft cream background */
+  --zw-black: #1A1A1A;      /* Rich black for text */
+  
+  /* Legacy support - mapped to new colors */
+  --izwm-brick: #5B8C5A;    /* Mapped to dark green for hero sections */
+  --izwm-cream: #F5F3ED;    /* Cream background */
+  
+  /* Neutral tones */
+  --ink-900: #1A1A1A;
+  --ink-600: #4A4A4A;
+  --line-200: #E5E5E5;
+  
+  /* Accent colors - derived from logo */
+  --accent-navy: #4A8FC7;   /* Primary blue from logo */
+  --accent-gold: #D4C84A;   /* Complementary gold */
+  --accent-sage: #7BA872;   /* Mid-green */
+  --accent-sky: #6BB5E8;    /* Lighter blue */
+  --accent-lime: #A4BF3D;   /* Lime from logo */
+  
+  /* Modality Chips - using logo colors */
+  --chip-hybrid: #6BB5E8;   /* Light blue for hybrid */
+  --chip-inperson: #7BA872; /* Green for in-person */
+  --chip-online: #A4BF3D;   /* Lime for online */
+
+  /* Layout & Effects */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+
+  /* Container */
+  --container: min(1120px, 92vw);
+}

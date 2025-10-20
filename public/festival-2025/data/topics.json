@@ -1,0 +1,63 @@
+[
+  {
+    "id": "circular-economy",
+    "name": "Circular Economy",
+    "description": "Designing out waste and keeping products in use"
+  },
+  {
+    "id": "waste-reduction",
+    "name": "Waste Reduction",
+    "description": "Strategies and practices to minimize waste generation"
+  },
+  {
+    "id": "plastic-free",
+    "name": "Plastic-Free Living",
+    "description": "Eliminating single-use plastics from daily life"
+  },
+  {
+    "id": "policy",
+    "name": "Policy & Advocacy",
+    "description": "Government policies and systemic change"
+  },
+  {
+    "id": "ocean-conservation",
+    "name": "Ocean Conservation",
+    "description": "Protecting marine ecosystems from pollution"
+  },
+  {
+    "id": "community-action",
+    "name": "Community Action",
+    "description": "Grassroots organizing and local initiatives"
+  },
+  {
+    "id": "business",
+    "name": "Sustainable Business",
+    "description": "Corporate sustainability and green entrepreneurship"
+  },
+  {
+    "id": "youth-engagement",
+    "name": "Youth Engagement",
+    "description": "Empowering young people as change agents"
+  },
+  {
+    "id": "climate-action",
+    "name": "Climate Action",
+    "description": "Addressing climate change through waste reduction"
+  },
+  {
+    "id": "composting",
+    "name": "Composting",
+    "description": "Organic waste management and soil health"
+  },
+  {
+    "id": "urban-farming",
+    "name": "Urban Farming",
+    "description": "Growing food in cities sustainably"
+  },
+  {
+    "id": "fashion",
+    "name": "Sustainable Fashion",
+    "description": "Reducing waste in the fashion industry"
+  }
+]
+

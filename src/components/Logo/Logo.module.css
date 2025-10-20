@@ -1,0 +1,31 @@
+.logoContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure logo is crisp on all displays */
+.logo {
+  shape-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .logo {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 200px;
+  }
+}
