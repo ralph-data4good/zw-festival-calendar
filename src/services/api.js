@@ -1,4 +1,6 @@
-const BASE = '/festival-2025/data';
+// Use Vite's base URL so assets resolve correctly on GitHub Pages
+// e.g., "/zw-festival-calendar/" in production and "/" in dev
+const BASE = `${import.meta.env.BASE_URL}festival-2025/data`;
 
 async function getJSON(name) {
   const res = await fetch(`${BASE}/${name}.json`, { cache: 'no-store' });

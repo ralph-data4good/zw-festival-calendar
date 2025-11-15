@@ -1,0 +1,627 @@
+# Zero Waste Asia Calculator - Design System Rules
+
+## Color System
+
+### Brand Colors
+- **Primary (ZWA Blue)**: Use for main actions, links, emphasis
+  - Main: `#2179B3` (zwa-blue-500) or `text-primary` / `bg-primary`
+  - Light: `#53A7D0` (zwa-blue-400) or `text-primary-light`
+  - Dark: `#14526F` (zwa-blue-700) or `text-primary-dark`
+  - Header: `#0D3A4E` (zwa-blue-800) or `bg-header-bg`
+
+- **Secondary (ZWA Gold)**: Use for primary CTAs, highlights
+  - Main: `#D4A73F` (zwa-gold-500) or `text-secondary` / `bg-secondary`
+  - Light: `#E7C876` (zwa-gold-400)
+  - Dark: `#B8923A` (zwa-gold-600)
+
+- **Accent Green**: Use for eco-friendly elements, success states
+  - Main: `#489E4A` (green-500)
+
+### Semantic Colors
+- **Backgrounds**: `bg` (white), `bg-muted` (neutral-50), `bg-card` (white)
+- **Text**: `fg` (neutral-900), `fg-muted` (neutral-600)
+- **Borders**: `border` (neutral-200), `border-muted` (neutral-100)
+
+### Usage Rules
+- Primary blue for secondary buttons, links, data visualization
+- Secondary gold for primary call-to-action buttons only
+- Never use generic green/red except for validation states
+- Always check color contrast (WCAG AA minimum)
+
+---
+
+## Typography
+
+### Font Stack
+```
+font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif
+```
+
+### Type Scale
+- **Hero/Large Title**: `text-4xl md:text-6xl font-extrabold` (48-72px, 800-900 weight)
+- **Page Title (H1)**: `text-2xl md:text-3xl font-bold` (24-48px, 700 weight)
+- **Section Title (H2)**: `text-xl md:text-2xl font-bold` (20-32px, 700 weight)
+- **Subsection (H3)**: `text-lg font-semibold` (18px, 600 weight)
+- **Body**: `text-base` (16px, 400 weight)
+- **Small**: `text-sm` (14px, 400 weight)
+- **Tiny**: `text-xs` (12px, 400 weight)
+
+### Typography Rules
+- Use `font-bold` or `font-semibold` for emphasis, NOT `font-black` or `font-light`
+- Body text line-height: `leading-relaxed` (1.625)
+- Headings line-height: `leading-tight` (1.25)
+- Emphasized locality/country: `font-bold text-primary text-lg`
+
+---
+
+## Buttons
+
+### Button Variants
+
+**Primary (Gold) - Main CTAs:**
+```tsx
+<Button variant="primary">Get Started</Button>
+// Styles: bg-secondary, text-secondary-contrast, hover:bg-secondary-dark
+```
+
+**Secondary (Blue) - Supporting Actions:**
+```tsx
+<Button variant="secondary">Edit Inputs</Button>
+// Styles: bg-primary, text-primary-contrast, hover:bg-primary-dark
+```
+
+**Ghost - Subtle Actions:**
+```tsx
+<Button variant="ghost">Back</Button>
+// Styles: hover:bg-neutral-100, text-fg-muted
+```
+
+**Outline - Secondary Emphasis:**
+```tsx
+<Button variant="outline">Learn More</Button>
+// Styles: border-2 border-primary, hover:bg-primary hover:text-white
+```
+
+### Button Sizes
+- `size="sm"`: h-9 px-4 text-sm
+- `size="md"`: h-11 px-6 text-base (default)
+- `size="lg"`: h-13 px-8 text-base
+
+### Button Rules
+- Primary (gold) buttons for main user actions only
+- Use icons from `lucide-react` on the left or right
+- Add `gap-2` when using icons with text
+- Minimum touch target: 44x44px
+- Hover effect: scale-[1.02] and shadow-md
+
+---
+
+## Form Elements
+
+### Input Fields
+
+**Standard Input with Suffix:**
+```tsx
+<LabelField
+  label="Population Served"
+  id="population"
+  value={value}
+  onChange={handleChange}
+  suffix="people"
+/>
+```
+
+**Rules:**
+- Always include `id` and `label` for accessibility
+- Add `pr-24` padding when suffix is present (prevents overlap)
+- Suffix styling: `absolute right-3 text-sm text-fg-muted pointer-events-none bg-bg`
+- Required fields: Show red asterisk `<span className="text-red-500">*</span>`
+- Error state: `border-red-500` class on input
+- Helper text: `text-xs text-fg-muted` below input
+- Error message: `text-xs text-red-500` below input
+
+### Select Fields
+- Use shadcn/ui Select component
+- Dropdown items should be clear and concise
+- Show "(optional)" or "*" for required/optional fields
+
+---
+
+## Layout & Spacing
+
+### Spacing Scale (8px base unit)
+- `space-y-2`: 8px (tight spacing)
+- `space-y-4`: 16px (related elements)
+- `space-y-6`: 24px (sections within container)
+- `space-y-8`: 32px (major sections)
+- `gap-4` / `gap-6` / `gap-8`: For grids
+
+### Container Widths
+- Main content: `max-w-6xl mx-auto` (1152px)
+- Page padding: `px-4 py-8`
+- Section padding: `p-6 md:p-10`
+
+### Grid Systems
+- Two columns: `grid md:grid-cols-2 gap-4`
+- Three columns: `grid md:grid-cols-3 gap-6`
+- Four columns: `grid md:grid-cols-4 gap-4`
+- Always use responsive breakpoints (md:, lg:)
+
+---
+
+## Components
+
+### Section Container
+```tsx
+<Section>
+  <SectionTitle>Title Here</SectionTitle>
+  <SectionDescription>Description here</SectionDescription>
+  {/* Content */}
+</Section>
+```
+
+**Styles:**
+- Background: `bg-bg` (white)
+- Border: `border border-border`
+- Radius: `rounded-xl` (16px)
+- Shadow: `shadow-md`
+- Padding: `p-6 md:p-10`
+
+### Metric Cards
+```tsx
+<Metric
+  label="Total Cost"
+  value={formatCurrency(value, country, 0)}
+  subtext="Annual disposal cost"
+/>
+```
+
+**Styles:**
+- Background: `bg-neutral-50` with `border border-neutral-200`
+- Padding: `p-4`
+- Border radius: `rounded-lg`
+- Number: `text-3xl md:text-4xl font-bold text-primary`
+- Label: `text-sm font-medium text-fg-muted uppercase tracking-wide`
+
+### Feature Cards
+```tsx
+<div className="rounded-xl border border-border bg-bg p-8 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-zwa-blue-100">
+    <Icon className="h-7 w-7 text-primary" />
+  </div>
+  <h3 className="text-xl font-bold text-fg mb-3">Title</h3>
+  <p className="text-fg-muted text-base leading-relaxed">Description</p>
+</div>
+```
+
+### Explainer Boxes
+```tsx
+<Explainer title="Optional Title">
+  <p>Explanation text here...</p>
+</Explainer>
+```
+
+**Styles:**
+- Background: `bg-bg-muted`
+- Border: `border border-border`
+- Radius: `rounded-lg`
+- Padding: `p-4`
+- Text: `text-sm text-fg-muted`
+
+---
+
+## Header
+
+### Sticky Header
+```tsx
+<header className="bg-header-bg border-b border-zwa-blue-700 sticky top-0 z-40 shadow-md">
+  <div className="max-w-6xl mx-auto px-4 py-4">
+    <h1 className="text-xl font-bold text-white">Zero Waste Calculator</h1>
+  </div>
+</header>
+```
+
+**Rules:**
+- Always dark teal background (`bg-header-bg`)
+- White text for all header content
+- Sticky positioning with `z-40`
+- Border color: `border-zwa-blue-700`
+
+---
+
+## Data Visualization (Charts)
+
+### Chart Colors
+- **Organics**: `#489E4A` (ZWA Green)
+- **Recyclables**: `#2179B3` (ZWA Blue)
+- **Residuals**: `#737373` (Neutral gray)
+- **Special**: `#D4A73F` (ZWA Gold)
+- **Savings**: `#489E4A` (Green)
+- **Revenue**: `#D4A73F` (Gold)
+
+### Chart Container
+```tsx
+<div className="w-full h-[400px]">
+  <ResponsiveContainer width="100%" height="100%">
+    {/* Chart component */}
+  </ResponsiveContainer>
+</div>
+```
+
+### Chart Styling Rules
+- Use CSS variables for colors: `var(--primary)`, `var(--border)`
+- Tooltip background: `var(--bg)` with `border: 1px solid var(--border)`
+- Border radius on tooltips: `borderRadius: '0.5rem'`
+- Rounded bar tops: `radius={[8, 8, 0, 0]}`
+
+---
+
+## Currency & Number Formatting
+
+### Always Use Helper Functions
+```tsx
+import { formatCurrency, formatNumber, formatPercent, getCurrencyCode } from '@/lib/format'
+
+// Currency (requires country parameter)
+formatCurrency(value, country, decimals)
+// Example: formatCurrency(5000, 'Philippines', 0) → "₱5,000"
+
+// Numbers
+formatNumber(value, decimals)
+// Example: formatNumber(1234.56, 2) → "1,234.56"
+
+// Percentages
+formatPercent(value, decimals)
+// Example: formatPercent(0.15, 1) → "15.0%"
+
+// Currency code
+getCurrencyCode(country)
+// Example: getCurrencyCode('Philippines') → "PHP"
+```
+
+### Rules
+- **NEVER** hardcode currency symbols (₱, Rp)
+- **ALWAYS** pass country parameter to formatCurrency
+- **ALWAYS** use formatNumber for thousands separator
+
+---
+
+## Emphasis & Context
+
+### Locality and Country Display
+When showing locality and country context:
+```tsx
+<span className="font-bold text-primary text-lg">{localityName}, {country}</span>
+```
+
+**Rules:**
+- Use this exact pattern for all location displays
+- Larger text (text-lg)
+- Primary color for brand consistency
+- Bold weight for emphasis
+- Always show both locality AND country together
+
+---
+
+## Accessibility
+
+### Required Practices
+1. **Labels**: Every input must have a `<Label>` with matching `htmlFor` and input `id`
+2. **Focus States**: All interactive elements have visible focus rings
+   - `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2`
+3. **Touch Targets**: Minimum 44x44px for all interactive elements
+4. **Color Contrast**: WCAG AA compliant (4.5:1 for normal text)
+5. **Keyboard Navigation**: All features accessible via keyboard
+
+### Error States
+```tsx
+{error && <p className="text-xs text-red-500">{error}</p>}
+```
+
+### Helper Text
+```tsx
+{helper && <p className="text-xs text-fg-muted">{helper}</p>}
+```
+
+---
+
+## Border Radius System
+
+- **Small**: `rounded-sm` (8px) - for small elements
+- **Medium**: `rounded-lg` (12px) - for inputs, small cards
+- **Large**: `rounded-xl` (16px) - for sections, large cards
+- **Pill**: `rounded-pill` (999px) - for tags, badges
+
+### Component Radius Guide
+- Inputs: `rounded-lg`
+- Buttons: `rounded-lg`
+- Cards: `rounded-xl`
+- Sections: `rounded-xl`
+- Icons containers: `rounded-xl`
+
+---
+
+## Shadows
+
+### Shadow Scale
+- `shadow-sm`: Subtle depth (0 1px 3px rgba(0,0,0,0.06))
+- `shadow-md`: Standard cards (0 4px 6px rgba(0,0,0,0.05))
+- `shadow-lg`: Elevated elements (0 10px 15px rgba(0,0,0,0.08))
+
+### Usage
+- Cards at rest: `shadow-md`
+- Cards on hover: `shadow-lg`
+- Header: `shadow-md`
+- Dropdowns: `shadow-lg`
+
+---
+
+## Transitions & Animations
+
+### Standard Transition
+```tsx
+className="transition-all duration-200"
+```
+
+### Hover Effects
+**Cards:**
+```tsx
+className="hover:shadow-lg hover:-translate-y-1 transition-all"
+```
+
+**Buttons:**
+```tsx
+className="hover:scale-[1.02] transition-all duration-200"
+```
+
+### Timing
+- Fast interactions: `duration-200` (200ms)
+- Standard: `duration-300` (300ms)
+- Smooth easing: Use default or `ease-out`
+
+---
+
+## Icons
+
+### Icon Library
+Use `lucide-react` exclusively:
+```tsx
+import { ArrowRight, Edit, Download, ChevronLeft } from 'lucide-react'
+```
+
+### Icon Sizing
+- Small: `h-4 w-4` (16px)
+- Medium: `h-5 w-5` (20px)
+- Large: `h-6 w-6` (24px)
+- Feature cards: `h-7 w-7` (28px)
+
+### Icon Colors
+- Match text color: `text-primary`, `text-fg`, `text-white`
+- In buttons: Same as button text color
+
+---
+
+## Responsive Design
+
+### Breakpoints
+- Mobile: default (< 768px)
+- Tablet: `md:` (≥ 768px)
+- Desktop: `lg:` (≥ 1024px)
+
+### Responsive Patterns
+```tsx
+// Typography
+className="text-2xl md:text-3xl"
+
+// Spacing
+className="p-6 md:p-10"
+
+// Grid
+className="grid md:grid-cols-2 lg:grid-cols-3"
+
+// Flex direction
+className="flex flex-col md:flex-row"
+```
+
+### Mobile-First Approach
+- Always design mobile first
+- Add `md:` and `lg:` for larger screens
+- Test at 320px, 768px, 1024px, 1440px
+
+---
+
+## State Management
+
+### Component State Patterns
+```tsx
+// Input validation
+const [error, setError] = useState<string>('')
+
+// Loading states
+const [isLoading, setIsLoading] = useState(false)
+
+// Form data
+const [inputs, setInputs] = useState<Inputs>(DEFAULTS)
+```
+
+### State Persistence
+- Save scenario mapper state when user continues
+- Pass `initialValues` prop to restore state on back navigation
+- Store location context (country, localityName) at calculator level
+
+---
+
+## File Structure
+
+### Component Organization
+```
+src/
+├── components/
+│   ├── ui/              # shadcn/ui base components
+│   ├── charts/          # Chart components (recharts)
+│   ├── StepZero/        # Scenario mapper components
+│   └── [Feature].tsx    # Feature components
+├── data/
+│   ├── types.ts         # TypeScript types
+│   ├── defaults.ts      # Default values
+│   └── scenarios.ts     # Scenario logic
+├── lib/
+│   ├── format.ts        # Formatting utilities
+│   ├── validation.ts    # Validation logic
+│   └── theme/           # Theme tokens
+└── pages/
+    └── Calculator.tsx   # Main calculator page
+```
+
+### Import Order
+1. React imports
+2. External libraries
+3. UI components
+4. Local components
+5. Utilities and helpers
+6. Types
+
+---
+
+## Code Style
+
+### Naming Conventions
+- Components: PascalCase (`Calculator.tsx`, `LabelField.tsx`)
+- Utilities: camelCase (`formatCurrency`, `validateInputs`)
+- Constants: UPPER_SNAKE_CASE (`DEFAULTS`, `SCENARIOS`)
+- Types: PascalCase (`Inputs`, `Derived`, `Country`)
+
+### TypeScript
+- Always use explicit types for props
+- Use `type` for object types, `interface` for extensible types
+- Export types from `types.ts`
+- No `any` types - use `unknown` if necessary
+
+### Function Components
+```tsx
+interface ComponentProps {
+  value: string
+  onChange: (value: string) => void
+}
+
+export function Component({ value, onChange }: ComponentProps) {
+  // Component logic
+  return (
+    // JSX
+  )
+}
+```
+
+---
+
+## Testing & Quality
+
+### Before Committing
+1. Run `npx tsc --noEmit` (no TypeScript errors)
+2. Check linter (no warnings)
+3. Test all interactive elements
+4. Verify responsive design (mobile, tablet, desktop)
+5. Check accessibility (keyboard navigation, screen reader)
+
+### Git Commit Messages
+Follow conventional commits:
+```
+feat: Add new feature
+fix: Fix bug
+docs: Update documentation
+style: UI/styling changes
+refactor: Code refactoring
+test: Add tests
+```
+
+---
+
+## Print Styles
+
+### Print-Specific Rules
+- Hide navigation and interactive elements
+- Show `.print-only` elements
+- Use page breaks: `.page-break-avoid`
+- Ensure charts render properly with `print-color-adjust: exact`
+- Include location context in print header
+
+---
+
+## Common Patterns
+
+### Conditional Rendering with Location
+```tsx
+{localityName ? (
+  <>
+    Content for <span className="font-bold text-primary text-lg">{localityName}, {country}</span>
+  </>
+) : (
+  <>
+    Generic content
+  </>
+)}
+```
+
+### Loading States
+```tsx
+{isLoading ? <Spinner /> : <Content />}
+```
+
+### Error Boundaries
+Always wrap risky operations in try-catch and show user-friendly errors.
+
+---
+
+## Performance
+
+### Optimization Rules
+1. Use `React.memo()` for expensive components
+2. Lazy load large components with `React.lazy()`
+3. Debounce expensive calculations
+4. Use `useCallback` for functions passed as props
+5. Use `useMemo` for expensive computations
+
+---
+
+## Multi-Currency Support
+
+### Implementation
+```tsx
+// Always pass country parameter
+<LabelField
+  suffix={getCurrencyCode(country)}
+  // ...
+/>
+
+// Format currency with country
+{formatCurrency(value, country, 0)}
+
+// Charts need country prop
+<CostBars derived={derived} country={country} />
+```
+
+### Supported Currencies
+- Philippines: PHP (₱)
+- Indonesia: IDR (Rp)
+
+---
+
+## Summary: Key Principles
+
+1. **Brand Consistency**: Use ZWA blue and gold colors consistently
+2. **Accessibility First**: WCAG AA compliance, keyboard navigation, clear labels
+3. **Mobile-First**: Design for mobile, enhance for desktop
+4. **Type Safety**: Always use TypeScript, no `any` types
+5. **User Context**: Always show location (locality + country) when available
+6. **Professional Polish**: Attention to detail (spacing, shadows, hover states)
+7. **Performance**: Optimize for speed, lazy load when possible
+8. **Internationalization**: Support multiple currencies and locales
+
+---
+
+**Last Updated**: October 27, 2024
+**Version**: 2.0
+**Status**: ✅ Production Ready
+
+Follow these rules to maintain consistency with the Zero Waste Asia design system and ensure high-quality, accessible, and professional code.
+

@@ -249,7 +249,7 @@
 - **Modality Filter**: In-person, Online, Hybrid
 - **Topic Chips**: Click multiple topics
 - **Date Range**: From and To dates
-- **Campaign Chips**: Featured campaigns
+- **Campaign Chips**: Key moments
 
 ### View Options
 - **Grid View**: Cards in responsive grid

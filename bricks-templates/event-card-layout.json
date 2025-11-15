@@ -1,0 +1,308 @@
+{
+  "version": "1.9.0",
+  "template_name": "Zero Waste Event Card",
+  "template_description": "Single event card layout that can be used with WordPress custom post types or ACF fields",
+  "content": [
+    {
+      "id": "event-card",
+      "name": "div",
+      "label": "Event Card",
+      "settings": {
+        "_background": {
+          "color": {
+            "hex": "#FFFFFF"
+          }
+        },
+        "_border": {
+          "width": {
+            "top": "1px",
+            "right": "1px",
+            "bottom": "1px",
+            "left": "1px"
+          },
+          "style": "solid",
+          "color": {
+            "hex": "#E5E5E5"
+          },
+          "radius": {
+            "top": "16px",
+            "right": "16px",
+            "bottom": "16px",
+            "left": "16px"
+          }
+        },
+        "_boxShadow": {
+          "values": [
+            {
+              "x": "0",
+              "y": "4px",
+              "blur": "12px",
+              "color": {
+                "hex": "#000000",
+                "alpha": "0.06"
+              }
+            }
+          ]
+        },
+        "_overflow": "hidden",
+        "_transition": "all 0.3s ease",
+        "_cssClasses": "event-card"
+      },
+      "children": [
+        {
+          "id": "event-image",
+          "name": "image",
+          "label": "Event Image",
+          "settings": {
+            "image": {
+              "url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800",
+              "size": "large"
+            },
+            "_width": "100%",
+            "_height": "200px",
+            "_objectFit": "cover",
+            "_cssClasses": "event-card-image"
+          }
+        },
+        {
+          "id": "event-content",
+          "name": "div",
+          "label": "Event Content",
+          "settings": {
+            "_padding": {
+              "top": "20px",
+              "bottom": "20px",
+              "left": "20px",
+              "right": "20px"
+            },
+            "_display": "flex",
+            "_flexDirection": "column",
+            "_gap": "12px"
+          },
+          "children": [
+            {
+              "id": "event-meta",
+              "name": "div",
+              "label": "Event Meta (Date & Modality)",
+              "settings": {
+                "_display": "flex",
+                "_justifyContent": "space-between",
+                "_alignItems": "center",
+                "_gap": "8px",
+                "_marginBottom": "8px"
+              },
+              "children": [
+                {
+                  "id": "event-date",
+                  "name": "text-basic",
+                  "settings": {
+                    "tag": "div",
+                    "text": "Jan 15, 2025",
+                    "_typography": {
+                      "fontSize": "0.875rem",
+                      "fontWeight": "600"
+                    },
+                    "_color": {
+                      "hex": "#4A4A4A"
+                    }
+                  }
+                },
+                {
+                  "id": "event-modality-badge",
+                  "name": "div",
+                  "label": "Modality Badge",
+                  "settings": {
+                    "text": "In-person",
+                    "_padding": {
+                      "top": "4px",
+                      "bottom": "4px",
+                      "left": "12px",
+                      "right": "12px"
+                    },
+                    "_background": {
+                      "color": {
+                        "hex": "#7BA872"
+                      }
+                    },
+                    "_color": {
+                      "hex": "#FFFFFF"
+                    },
+                    "_typography": {
+                      "fontSize": "0.75rem",
+                      "fontWeight": "600"
+                    },
+                    "_border": {
+                      "radius": {
+                        "top": "12px",
+                        "right": "12px",
+                        "bottom": "12px",
+                        "left": "12px"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "event-title",
+              "name": "heading",
+              "settings": {
+                "tag": "h3",
+                "text": "Zero Waste Workshop: Composting Basics",
+                "_typography": {
+                  "fontSize": "1.25rem",
+                  "fontWeight": "700",
+                  "lineHeight": "1.3"
+                },
+                "_color": {
+                  "hex": "#1A1A1A"
+                },
+                "_margin": {
+                  "bottom": "8px"
+                }
+              }
+            },
+            {
+              "id": "event-location",
+              "name": "div",
+              "label": "Event Location",
+              "settings": {
+                "_display": "flex",
+                "_alignItems": "center",
+                "_gap": "6px"
+              },
+              "children": [
+                {
+                  "id": "location-icon",
+                  "name": "icon",
+                  "settings": {
+                    "icon": {
+                      "library": "themify",
+                      "icon": "ti-location-pin"
+                    },
+                    "_width": "16px",
+                    "_height": "16px",
+                    "_color": {
+                      "hex": "#4A4A4A"
+                    }
+                  }
+                },
+                {
+                  "id": "location-text",
+                  "name": "text-basic",
+                  "settings": {
+                    "tag": "span",
+                    "text": "Manila, Philippines",
+                    "_typography": {
+                      "fontSize": "0.875rem"
+                    },
+                    "_color": {
+                      "hex": "#4A4A4A"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "event-category",
+              "name": "text-basic",
+              "label": "Event Category",
+              "settings": {
+                "tag": "div",
+                "text": "Workshop",
+                "_padding": {
+                  "top": "4px",
+                  "bottom": "4px",
+                  "left": "12px",
+                  "right": "12px"
+                },
+                "_background": {
+                  "color": {
+                    "hex": "#F5F3ED"
+                  }
+                },
+                "_color": {
+                  "hex": "#5B8C5A"
+                },
+                "_typography": {
+                  "fontSize": "0.75rem",
+                  "fontWeight": "600"
+                },
+                "_border": {
+                  "radius": {
+                    "top": "8px",
+                    "right": "8px",
+                    "bottom": "8px",
+                    "left": "8px"
+                  }
+                },
+                "_display": "inline-block",
+                "_marginTop": "4px"
+              }
+            },
+            {
+              "id": "event-summary",
+              "name": "text-basic",
+              "label": "Event Summary",
+              "settings": {
+                "tag": "p",
+                "text": "Learn the fundamentals of composting and turn your food waste into nutrient-rich soil for your garden.",
+                "_typography": {
+                  "fontSize": "0.875rem",
+                  "lineHeight": "1.6"
+                },
+                "_color": {
+                  "hex": "#4A4A4A"
+                },
+                "_margin": {
+                  "top": "8px"
+                }
+              }
+            },
+            {
+              "id": "event-cta",
+              "name": "button",
+              "label": "View Details Button",
+              "settings": {
+                "text": "View Details",
+                "link": {
+                  "url": "#"
+                },
+                "_width": "100%",
+                "_padding": {
+                  "top": "12px",
+                  "bottom": "12px",
+                  "left": "20px",
+                  "right": "20px"
+                },
+                "_background": {
+                  "color": {
+                    "hex": "#4A8FC7"
+                  }
+                },
+                "_color": {
+                  "hex": "#FFFFFF"
+                },
+                "_typography": {
+                  "fontSize": "0.875rem",
+                  "fontWeight": "600"
+                },
+                "_border": {
+                  "radius": {
+                    "top": "8px",
+                    "right": "8px",
+                    "bottom": "8px",
+                    "left": "8px"
+                  }
+                },
+                "_marginTop": "12px",
+                "_textAlign": "center"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

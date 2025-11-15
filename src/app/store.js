@@ -140,7 +140,7 @@ export const useStore = create((set, get) => ({
     return countries.sort();
   },
 
-  // Get featured campaigns
+  // Get key moments (featured campaigns)
   getFeaturedCampaigns: () => {
     const { campaigns } = get();
     return campaigns.filter((c) => c.featured);

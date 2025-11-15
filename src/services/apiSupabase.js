@@ -181,7 +181,7 @@ export async function getReferenceData() {
 }
 
 /**
- * Get featured campaigns
+ * Get key moments (featured campaigns)
  */
 export async function getFeaturedCampaigns() {
   if (!supabase) throw new Error('Supabase not configured');

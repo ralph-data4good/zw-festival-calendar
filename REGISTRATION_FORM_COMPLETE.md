@@ -11,7 +11,7 @@ The registration form was missing several important fields that were shown in th
 - ❌ Required Consents checkboxes
 
 ### **Issue 2: Campaign Filtering Not Working**
-Featured campaigns were displayed, but clicking them didn't filter events because:
+Key Moments (featured campaigns) were displayed, but clicking them didn't filter events because:
 - Events had no `campaign_id` data
 - Store filter logic was checking wrong field (`campaigns` array instead of `campaign_id`)
 

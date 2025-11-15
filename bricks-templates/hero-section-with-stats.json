@@ -1,0 +1,480 @@
+{
+  "version": "1.9.0",
+  "template_name": "Zero Waste Hero Section with Stats",
+  "template_description": "Hero section with title, subtitle, CTA buttons, and quick stats panel",
+  "content": [
+    {
+      "id": "hero-section",
+      "name": "section",
+      "label": "Hero Section",
+      "settings": {
+        "tag": "section",
+        "_padding": {
+          "top": "80px",
+          "bottom": "80px",
+          "left": "20px",
+          "right": "20px"
+        },
+        "_background": {
+          "color": {
+            "hex": "#5B8C5A"
+          },
+          "gradient": {
+            "angle": "135deg",
+            "colors": [
+              {
+                "hex": "#5B8C5A",
+                "position": 0
+              },
+              {
+                "hex": "#4A8FC7",
+                "position": 100
+              }
+            ]
+          }
+        },
+        "_cssClasses": "hero-section"
+      },
+      "children": [
+        {
+          "id": "hero-container",
+          "name": "container",
+          "settings": {
+            "_width": "1120px",
+            "_display": "grid",
+            "_gridTemplateColumns": {
+              "desktop": "1.2fr 0.8fr",
+              "tablet": "1fr",
+              "mobile": "1fr"
+            },
+            "_gap": "40px",
+            "_alignItems": "center"
+          },
+          "children": [
+            {
+              "id": "hero-content",
+              "name": "div",
+              "label": "Hero Content",
+              "settings": {
+                "_display": "flex",
+                "_flexDirection": "column",
+                "_gap": "28px"
+              },
+              "children": [
+                {
+                  "id": "hero-title",
+                  "name": "heading",
+                  "label": "Hero Title",
+                  "settings": {
+                    "tag": "h1",
+                    "text": "Celebrate Zero Waste, Together.",
+                    "_typography": {
+                      "fontSize": {
+                        "desktop": "4rem",
+                        "tablet": "3rem",
+                        "mobile": "2.5rem"
+                      },
+                      "fontWeight": "700",
+                      "lineHeight": "1.1",
+                      "letterSpacing": "-0.02em"
+                    },
+                    "_color": {
+                      "hex": "#FFFFFF"
+                    },
+                    "_margin": {
+                      "top": "0",
+                      "bottom": "0"
+                    }
+                  }
+                },
+                {
+                  "id": "hero-subtitle",
+                  "name": "text-basic",
+                  "label": "Hero Subtitle",
+                  "settings": {
+                    "tag": "p",
+                    "text": "Discover, register, and map activities across Asia that advance zero-waste solutions.",
+                    "_typography": {
+                      "fontSize": {
+                        "desktop": "1.5rem",
+                        "tablet": "1.25rem",
+                        "mobile": "1.125rem"
+                      },
+                      "lineHeight": "1.5"
+                    },
+                    "_color": {
+                      "hex": "#FFFFFF",
+                      "alpha": "0.95"
+                    },
+                    "_maxWidth": "600px"
+                  }
+                },
+                {
+                  "id": "hero-buttons",
+                  "name": "div",
+                  "label": "CTA Buttons",
+                  "settings": {
+                    "_display": "flex",
+                    "_flexWrap": "wrap",
+                    "_gap": "12px",
+                    "_marginTop": "8px"
+                  },
+                  "children": [
+                    {
+                      "id": "btn-add-event",
+                      "name": "button",
+                      "label": "Add Event Button",
+                      "settings": {
+                        "text": "Add Your Event",
+                        "link": {
+                          "url": "/register"
+                        },
+                        "_padding": {
+                          "top": "14px",
+                          "bottom": "14px",
+                          "left": "28px",
+                          "right": "28px"
+                        },
+                        "_background": {
+                          "color": {
+                            "hex": "#A4BF3D"
+                          }
+                        },
+                        "_color": {
+                          "hex": "#1A1A1A"
+                        },
+                        "_typography": {
+                          "fontSize": "1rem",
+                          "fontWeight": "600"
+                        },
+                        "_border": {
+                          "radius": {
+                            "top": "12px",
+                            "right": "12px",
+                            "bottom": "12px",
+                            "left": "12px"
+                          }
+                        },
+                        "_boxShadow": {
+                          "values": [
+                            {
+                              "x": "0",
+                              "y": "4px",
+                              "blur": "12px",
+                              "color": {
+                                "hex": "#000000",
+                                "alpha": "0.15"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "btn-calendar",
+                      "name": "button",
+                      "label": "Calendar Button",
+                      "settings": {
+                        "text": "Explore Calendar",
+                        "link": {
+                          "url": "/calendar"
+                        },
+                        "_padding": {
+                          "top": "14px",
+                          "bottom": "14px",
+                          "left": "28px",
+                          "right": "28px"
+                        },
+                        "_background": {
+                          "color": {
+                            "hex": "transparent"
+                          }
+                        },
+                        "_color": {
+                          "hex": "#FFFFFF"
+                        },
+                        "_border": {
+                          "width": {
+                            "top": "2px",
+                            "right": "2px",
+                            "bottom": "2px",
+                            "left": "2px"
+                          },
+                          "style": "solid",
+                          "color": {
+                            "hex": "#FFFFFF"
+                          },
+                          "radius": {
+                            "top": "12px",
+                            "right": "12px",
+                            "bottom": "12px",
+                            "left": "12px"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": "btn-map",
+                      "name": "button",
+                      "label": "Map Button",
+                      "settings": {
+                        "text": "View Map",
+                        "link": {
+                          "url": "/map"
+                        },
+                        "_padding": {
+                          "top": "14px",
+                          "bottom": "14px",
+                          "left": "28px",
+                          "right": "28px"
+                        },
+                        "_background": {
+                          "color": {
+                            "hex": "transparent"
+                          }
+                        },
+                        "_color": {
+                          "hex": "#FFFFFF"
+                        },
+                        "_border": {
+                          "width": {
+                            "top": "2px",
+                            "right": "2px",
+                            "bottom": "2px",
+                            "left": "2px"
+                          },
+                          "style": "solid",
+                          "color": {
+                            "hex": "#FFFFFF"
+                          },
+                          "radius": {
+                            "top": "12px",
+                            "right": "12px",
+                            "bottom": "12px",
+                            "left": "12px"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "stats-panel",
+              "name": "div",
+              "label": "Quick Stats Panel",
+              "settings": {
+                "_background": {
+                  "color": {
+                    "hex": "#F5F3ED"
+                  }
+                },
+                "_padding": {
+                  "top": "36px",
+                  "bottom": "36px",
+                  "left": "36px",
+                  "right": "36px"
+                },
+                "_border": {
+                  "radius": {
+                    "top": "24px",
+                    "right": "24px",
+                    "bottom": "24px",
+                    "left": "24px"
+                  }
+                },
+                "_boxShadow": {
+                  "values": [
+                    {
+                      "x": "0",
+                      "y": "12px",
+                      "blur": "40px",
+                      "color": {
+                        "hex": "#000000",
+                        "alpha": "0.15"
+                      }
+                    }
+                  ]
+                }
+              },
+              "children": [
+                {
+                  "id": "stats-title",
+                  "name": "heading",
+                  "settings": {
+                    "tag": "h3",
+                    "text": "Quick Stats",
+                    "_typography": {
+                      "fontSize": "1.25rem",
+                      "fontWeight": "600"
+                    },
+                    "_color": {
+                      "hex": "#5B8C5A"
+                    },
+                    "_margin": {
+                      "bottom": "20px"
+                    }
+                  }
+                },
+                {
+                  "id": "stats-grid",
+                  "name": "div",
+                  "settings": {
+                    "_display": "grid",
+                    "_gridTemplateColumns": "repeat(3, 1fr)",
+                    "_gap": "20px"
+                  },
+                  "children": [
+                    {
+                      "id": "stat-1",
+                      "name": "div",
+                      "label": "Stat: Total Events",
+                      "settings": {
+                        "_textAlign": "center"
+                      },
+                      "children": [
+                        {
+                          "id": "stat-1-value",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "div",
+                            "text": "101",
+                            "_typography": {
+                              "fontSize": {
+                                "desktop": "3.5rem",
+                                "mobile": "2.5rem"
+                              },
+                              "fontWeight": "700",
+                              "lineHeight": "1"
+                            },
+                            "_color": {
+                              "hex": "#4A8FC7"
+                            },
+                            "_margin": {
+                              "bottom": "8px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "stat-1-label",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "div",
+                            "text": "Total Events",
+                            "_typography": {
+                              "fontSize": "0.875rem",
+                              "fontWeight": "600"
+                            },
+                            "_color": {
+                              "hex": "#4A4A4A"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "stat-2",
+                      "name": "div",
+                      "label": "Stat: This Week",
+                      "settings": {
+                        "_textAlign": "center"
+                      },
+                      "children": [
+                        {
+                          "id": "stat-2-value",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "div",
+                            "text": "12",
+                            "_typography": {
+                              "fontSize": {
+                                "desktop": "3.5rem",
+                                "mobile": "2.5rem"
+                              },
+                              "fontWeight": "700",
+                              "lineHeight": "1"
+                            },
+                            "_color": {
+                              "hex": "#4A8FC7"
+                            },
+                            "_margin": {
+                              "bottom": "8px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "stat-2-label",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "div",
+                            "text": "This Week",
+                            "_typography": {
+                              "fontSize": "0.875rem",
+                              "fontWeight": "600"
+                            },
+                            "_color": {
+                              "hex": "#4A4A4A"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "stat-3",
+                      "name": "div",
+                      "label": "Stat: Countries",
+                      "settings": {
+                        "_textAlign": "center"
+                      },
+                      "children": [
+                        {
+                          "id": "stat-3-value",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "div",
+                            "text": "25",
+                            "_typography": {
+                              "fontSize": {
+                                "desktop": "3.5rem",
+                                "mobile": "2.5rem"
+                              },
+                              "fontWeight": "700",
+                              "lineHeight": "1"
+                            },
+                            "_color": {
+                              "hex": "#4A8FC7"
+                            },
+                            "_margin": {
+                              "bottom": "8px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "stat-3-label",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "div",
+                            "text": "Countries",
+                            "_typography": {
+                              "fontSize": "0.875rem",
+                              "fontWeight": "600"
+                            },
+                            "_color": {
+                              "hex": "#4A4A4A"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

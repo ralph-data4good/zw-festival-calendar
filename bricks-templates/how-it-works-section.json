@@ -1,0 +1,559 @@
+{
+  "version": "1.9.0",
+  "template_name": "Zero Waste How It Works Section",
+  "template_description": "Three-step process section with icons, titles, descriptions, and links",
+  "content": [
+    {
+      "id": "how-it-works-section",
+      "name": "section",
+      "label": "How It Works Section",
+      "settings": {
+        "tag": "section",
+        "_padding": {
+          "top": "100px",
+          "bottom": "100px",
+          "left": "20px",
+          "right": "20px"
+        },
+        "_background": {
+          "gradient": {
+            "angle": "180deg",
+            "colors": [
+              {
+                "hex": "#FFFFFF",
+                "position": 0
+              },
+              {
+                "hex": "#F5F3ED",
+                "position": 100
+              }
+            ]
+          }
+        },
+        "_cssClasses": "how-it-works-section"
+      },
+      "children": [
+        {
+          "id": "how-container",
+          "name": "container",
+          "settings": {
+            "_width": "1120px"
+          },
+          "children": [
+            {
+              "id": "section-title",
+              "name": "heading",
+              "settings": {
+                "tag": "h2",
+                "text": "How It Works",
+                "_typography": {
+                  "fontSize": {
+                    "desktop": "2.75rem",
+                    "tablet": "2.25rem",
+                    "mobile": "2rem"
+                  },
+                  "fontWeight": "700"
+                },
+                "_color": {
+                  "hex": "#1A1A1A"
+                },
+                "_textAlign": "center",
+                "_margin": {
+                  "bottom": "48px"
+                }
+              }
+            },
+            {
+              "id": "steps-grid",
+              "name": "div",
+              "label": "Steps Grid",
+              "settings": {
+                "_display": "grid",
+                "_gridTemplateColumns": {
+                  "desktop": "repeat(3, 1fr)",
+                  "tablet": "1fr",
+                  "mobile": "1fr"
+                },
+                "_gap": "32px",
+                "_maxWidth": "1200px",
+                "_margin": {
+                  "left": "auto",
+                  "right": "auto"
+                }
+              },
+              "children": [
+                {
+                  "id": "step-1",
+                  "name": "div",
+                  "label": "Step 1: Add Your Event",
+                  "settings": {
+                    "_background": {
+                      "color": {
+                        "hex": "#FFFFFF"
+                      }
+                    },
+                    "_padding": {
+                      "top": "32px",
+                      "bottom": "32px",
+                      "left": "32px",
+                      "right": "32px"
+                    },
+                    "_border": {
+                      "width": {
+                        "top": "2px",
+                        "right": "2px",
+                        "bottom": "2px",
+                        "left": "2px"
+                      },
+                      "style": "solid",
+                      "color": {
+                        "hex": "transparent"
+                      },
+                      "radius": {
+                        "top": "24px",
+                        "right": "24px",
+                        "bottom": "24px",
+                        "left": "24px"
+                      }
+                    },
+                    "_boxShadow": {
+                      "values": [
+                        {
+                          "x": "0",
+                          "y": "8px",
+                          "blur": "20px",
+                          "color": {
+                            "hex": "#000000",
+                            "alpha": "0.08"
+                          }
+                        }
+                      ]
+                    },
+                    "_display": "flex",
+                    "_flexDirection": "column",
+                    "_gap": "20px",
+                    "_transition": "all 0.3s ease"
+                  },
+                  "children": [
+                    {
+                      "id": "step-1-icon",
+                      "name": "icon",
+                      "settings": {
+                        "icon": {
+                          "library": "themify",
+                          "icon": "ti-pencil-alt"
+                        },
+                        "_width": "64px",
+                        "_height": "64px",
+                        "_background": {
+                          "color": {
+                            "hex": "#4A8FC7"
+                          }
+                        },
+                        "_color": {
+                          "hex": "#FFFFFF"
+                        },
+                        "_border": {
+                          "radius": {
+                            "top": "50%",
+                            "right": "50%",
+                            "bottom": "50%",
+                            "left": "50%"
+                          }
+                        },
+                        "_boxShadow": {
+                          "values": [
+                            {
+                              "x": "0",
+                              "y": "4px",
+                              "blur": "12px",
+                              "color": {
+                                "hex": "#4A8FC7",
+                                "alpha": "0.3"
+                              }
+                            }
+                          ]
+                        },
+                        "_display": "flex",
+                        "_alignItems": "center",
+                        "_justifyContent": "center"
+                      }
+                    },
+                    {
+                      "id": "step-1-content",
+                      "name": "div",
+                      "children": [
+                        {
+                          "id": "step-1-title",
+                          "name": "heading",
+                          "settings": {
+                            "tag": "h3",
+                            "text": "Add Your Event",
+                            "_typography": {
+                              "fontSize": "1.5rem",
+                              "fontWeight": "700"
+                            },
+                            "_color": {
+                              "hex": "#1A1A1A"
+                            },
+                            "_margin": {
+                              "bottom": "12px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "step-1-description",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "p",
+                            "text": "Share your zero waste activities with our community",
+                            "_typography": {
+                              "fontSize": "1rem",
+                              "lineHeight": "1.6"
+                            },
+                            "_color": {
+                              "hex": "#4A4A4A"
+                            },
+                            "_margin": {
+                              "bottom": "8px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "step-1-link",
+                          "name": "text-link",
+                          "settings": {
+                            "text": "Register Now →",
+                            "link": {
+                              "url": "/register"
+                            },
+                            "_typography": {
+                              "fontWeight": "600"
+                            },
+                            "_color": {
+                              "hex": "#4A8FC7"
+                            },
+                            "_marginTop": "8px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "step-2",
+                  "name": "div",
+                  "label": "Step 2: Explore Calendar",
+                  "settings": {
+                    "_background": {
+                      "color": {
+                        "hex": "#FFFFFF"
+                      }
+                    },
+                    "_padding": {
+                      "top": "32px",
+                      "bottom": "32px",
+                      "left": "32px",
+                      "right": "32px"
+                    },
+                    "_border": {
+                      "width": {
+                        "top": "2px",
+                        "right": "2px",
+                        "bottom": "2px",
+                        "left": "2px"
+                      },
+                      "style": "solid",
+                      "color": {
+                        "hex": "transparent"
+                      },
+                      "radius": {
+                        "top": "24px",
+                        "right": "24px",
+                        "bottom": "24px",
+                        "left": "24px"
+                      }
+                    },
+                    "_boxShadow": {
+                      "values": [
+                        {
+                          "x": "0",
+                          "y": "8px",
+                          "blur": "20px",
+                          "color": {
+                            "hex": "#000000",
+                            "alpha": "0.08"
+                          }
+                        }
+                      ]
+                    },
+                    "_display": "flex",
+                    "_flexDirection": "column",
+                    "_gap": "20px"
+                  },
+                  "children": [
+                    {
+                      "id": "step-2-icon",
+                      "name": "icon",
+                      "settings": {
+                        "icon": {
+                          "library": "themify",
+                          "icon": "ti-calendar"
+                        },
+                        "_width": "64px",
+                        "_height": "64px",
+                        "_background": {
+                          "color": {
+                            "hex": "#4A8FC7"
+                          }
+                        },
+                        "_color": {
+                          "hex": "#FFFFFF"
+                        },
+                        "_border": {
+                          "radius": {
+                            "top": "50%",
+                            "right": "50%",
+                            "bottom": "50%",
+                            "left": "50%"
+                          }
+                        },
+                        "_boxShadow": {
+                          "values": [
+                            {
+                              "x": "0",
+                              "y": "4px",
+                              "blur": "12px",
+                              "color": {
+                                "hex": "#4A8FC7",
+                                "alpha": "0.3"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "step-2-content",
+                      "name": "div",
+                      "children": [
+                        {
+                          "id": "step-2-title",
+                          "name": "heading",
+                          "settings": {
+                            "tag": "h3",
+                            "text": "Explore the Calendar",
+                            "_typography": {
+                              "fontSize": "1.5rem",
+                              "fontWeight": "700"
+                            },
+                            "_color": {
+                              "hex": "#1A1A1A"
+                            },
+                            "_margin": {
+                              "bottom": "12px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "step-2-description",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "p",
+                            "text": "Find events happening near you or online",
+                            "_typography": {
+                              "fontSize": "1rem",
+                              "lineHeight": "1.6"
+                            },
+                            "_color": {
+                              "hex": "#4A4A4A"
+                            },
+                            "_margin": {
+                              "bottom": "8px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "step-2-link",
+                          "name": "text-link",
+                          "settings": {
+                            "text": "Browse Events →",
+                            "link": {
+                              "url": "/calendar"
+                            },
+                            "_typography": {
+                              "fontWeight": "600"
+                            },
+                            "_color": {
+                              "hex": "#4A8FC7"
+                            },
+                            "_marginTop": "8px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "step-3",
+                  "name": "div",
+                  "label": "Step 3: Filter & Subscribe",
+                  "settings": {
+                    "_background": {
+                      "color": {
+                        "hex": "#FFFFFF"
+                      }
+                    },
+                    "_padding": {
+                      "top": "32px",
+                      "bottom": "32px",
+                      "left": "32px",
+                      "right": "32px"
+                    },
+                    "_border": {
+                      "width": {
+                        "top": "2px",
+                        "right": "2px",
+                        "bottom": "2px",
+                        "left": "2px"
+                      },
+                      "style": "solid",
+                      "color": {
+                        "hex": "transparent"
+                      },
+                      "radius": {
+                        "top": "24px",
+                        "right": "24px",
+                        "bottom": "24px",
+                        "left": "24px"
+                      }
+                    },
+                    "_boxShadow": {
+                      "values": [
+                        {
+                          "x": "0",
+                          "y": "8px",
+                          "blur": "20px",
+                          "color": {
+                            "hex": "#000000",
+                            "alpha": "0.08"
+                          }
+                        }
+                      ]
+                    },
+                    "_display": "flex",
+                    "_flexDirection": "column",
+                    "_gap": "20px"
+                  },
+                  "children": [
+                    {
+                      "id": "step-3-icon",
+                      "name": "icon",
+                      "settings": {
+                        "icon": {
+                          "library": "themify",
+                          "icon": "ti-filter"
+                        },
+                        "_width": "64px",
+                        "_height": "64px",
+                        "_background": {
+                          "color": {
+                            "hex": "#4A8FC7"
+                          }
+                        },
+                        "_color": {
+                          "hex": "#FFFFFF"
+                        },
+                        "_border": {
+                          "radius": {
+                            "top": "50%",
+                            "right": "50%",
+                            "bottom": "50%",
+                            "left": "50%"
+                          }
+                        },
+                        "_boxShadow": {
+                          "values": [
+                            {
+                              "x": "0",
+                              "y": "4px",
+                              "blur": "12px",
+                              "color": {
+                                "hex": "#4A8FC7",
+                                "alpha": "0.3"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "step-3-content",
+                      "name": "div",
+                      "children": [
+                        {
+                          "id": "step-3-title",
+                          "name": "heading",
+                          "settings": {
+                            "tag": "h3",
+                            "text": "Filter & Subscribe",
+                            "_typography": {
+                              "fontSize": "1.5rem",
+                              "fontWeight": "700"
+                            },
+                            "_color": {
+                              "hex": "#1A1A1A"
+                            },
+                            "_margin": {
+                              "bottom": "12px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "step-3-description",
+                          "name": "text-basic",
+                          "settings": {
+                            "tag": "p",
+                            "text": "Get updates on topics that matter to you",
+                            "_typography": {
+                              "fontSize": "1rem",
+                              "lineHeight": "1.6"
+                            },
+                            "_color": {
+                              "hex": "#4A4A4A"
+                            },
+                            "_margin": {
+                              "bottom": "8px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "step-3-link",
+                          "name": "text-link",
+                          "settings": {
+                            "text": "Start Filtering →",
+                            "link": {
+                              "url": "/calendar"
+                            },
+                            "_typography": {
+                              "fontWeight": "600"
+                            },
+                            "_color": {
+                              "hex": "#4A8FC7"
+                            },
+                            "_marginTop": "8px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -19,7 +19,7 @@ function Chips() {
 
   return (
     <div className={styles.chipsContainer}>
-      <h3 className={styles.chipsTitle}>Featured Campaigns</h3>
+      <h3 className={styles.chipsTitle}>Key Moments</h3>
       <div className="chips">
         {campaigns.map((campaign) => (
           <button

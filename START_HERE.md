@@ -48,7 +48,7 @@ Then open: **http://localhost:3000**
 | **ICONS_UPDATE.md** | Icon system details | When adding icons |
 | **MAP_FIX_DOCUMENTATION.md** | Map & filters guide | When working with map |
 | **MAP_FILTERS_SYNCHRONIZATION_FIX.md** | Filter sync fix | If filters don't update map |
-| **FEATURED_CAMPAIGNS_FIX.md** | Campaigns on all pages | When adding campaign features |
+| **FEATURED_CAMPAIGNS_FIX.md** | Key Moments on all pages | When adding campaign features |
 | **REGISTRATION_FORM_COMPLETE.md** | Complete registration | Form fields & campaign integration |
 | **MAP_PICKER_INTEGRATION.md** | Interactive map picker | Location selection with auto-fill |
 | **ICON_AND_DATA_FIXES.md** | Icons & test data | After icon/data updates |

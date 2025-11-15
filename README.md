@@ -116,7 +116,7 @@ All data lives in `public/festival-2025/data/*.json`:
 **Other files:**
 - `topics.json` - Topic taxonomy
 - `categories.json` - Event categories
-- `campaigns.json` - Featured campaigns
+- `campaigns.json` - Key moments (featured campaigns)
 - `organizers.json` - Organizations
 - `partners.json` - Partner details
 

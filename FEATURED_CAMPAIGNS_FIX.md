@@ -1,8 +1,8 @@
-# Featured Campaigns - Added to All Pages
+# Key Moments - Added to All Pages
 
 ## 🔍 **Issue**
 
-Featured Campaigns chips were missing from the **Register** page. They were only visible on:
+Key Moments chips (formerly "Featured Campaigns") were missing from the **Register** page. They were only visible on:
 - ✅ Home page
 - ✅ Calendar page
 - ❌ Register page (missing!)
@@ -41,10 +41,10 @@ Changed the Register page header from emoji to icon:
 
 ---
 
-## 🎯 **Featured Campaigns Component**
+## 🎯 **Key Moments Component**
 
 ### What It Does:
-The Chips component displays featured campaigns and allows users to filter events by campaign.
+The Chips component displays key moments (featured campaigns) and allows users to filter events by campaign.
 
 ### Available Campaigns:
 1. **🌍 International Zero Waste Month 2025** (izwm2025)
@@ -53,7 +53,7 @@ The Chips component displays featured campaigns and allows users to filter event
 
 ### How It Works:
 ```javascript
-// Get featured campaigns from store
+// Get key moments from store
 const campaigns = useStore((state) => state.getFeaturedCampaigns());
 
 // Filter by campaign
@@ -140,7 +140,7 @@ Located after page header and before filters.
 └──────────────────────────────────────────┘
 
 ┌──────────────────────────────────────────┐
-│  Featured Campaigns                      │
+│  Key Moments                              │
 │  [🌍 IZWM 2025] [🚫 Plastic Free July]  │
 │  [🌊 World Ocean Day]                    │
 └──────────────────────────────────────────┘
@@ -180,12 +180,12 @@ Located after page header and before filters.
    ```
    http://localhost:3005/register
    ```
-   - ✅ Featured Campaigns section appears below header
+   - ✅ Key Moments section appears below header
    - ✅ All 3 campaign chips visible
    - ✅ Proper spacing before step indicator
 
 2. **Submit a Form**
-   - ✅ Success page shows Featured Campaigns
+   - ✅ Success page shows Key Moments
    - ✅ Campaign chips remain visible
    - ✅ Can navigate using campaigns
 
@@ -351,12 +351,12 @@ This would:
 ## ✅ **Summary**
 
 ### Before:
-- ❌ Featured Campaigns only on Home & Calendar
+- ❌ Key Moments only on Home & Calendar
 - ❌ Register page missing campaign context
 - ❌ Inconsistent icon usage (emoji vs SVG)
 
 ### After:
-- ✅ Featured Campaigns on ALL pages (Home, Calendar, Register)
+- ✅ Key Moments on ALL pages (Home, Calendar, Register)
 - ✅ Consistent campaign filtering across app
 - ✅ Unified icon system (SVG icons everywhere)
 - ✅ Proper spacing and responsive design
@@ -392,6 +392,6 @@ This would:
 
 **Status:** ✅ **COMPLETE**
 
-All pages now display Featured Campaigns consistently!
+All pages now display Key Moments consistently!
 Refresh at http://localhost:3005/register to see the campaigns! 🎉
 

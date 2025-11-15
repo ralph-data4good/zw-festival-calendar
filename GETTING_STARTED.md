@@ -21,7 +21,7 @@ http://localhost:3000
 
 ### Home Page (`/`)
 - Hero section with stats
-- Featured campaign chips
+- Key moments chips
 - "Happening This Week" events
 - "Newly Added" events
 
