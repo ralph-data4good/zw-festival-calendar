@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useStore } from '../app/store';
 import EventCard from '../components/EventCard/EventCard';
 import EventDrawer from '../components/EventDrawer/EventDrawer';
-import Chips from '../components/Chips/Chips';
 import Icons from '../components/Icons/Icons';
 import styles from './Home.module.css';
 
@@ -163,7 +162,6 @@ function Home() {
 
       <section className={styles.eventsSection}>
         <div className="container">
-          <Chips />
 
           {thisWeekEvents.length > 0 && (
             <div className={styles.eventBlock}>
@@ -191,7 +189,7 @@ function Home() {
                 <div>
                   <h2 className="h2">
                     <span style={{ fontSize: '28px', marginRight: '8px' }}>{ongoingCampaign.emoji}</span>
-                    Happening Now: {ongoingCampaign.name}
+                    In Focus: {ongoingCampaign.name}
                   </h2>
                   <p className={styles.campaignDescription}>
                     {ongoingCampaign.description}
@@ -222,7 +220,7 @@ function Home() {
                 <div>
                   <h2 className="h2">
                     <span style={{ fontSize: '28px', marginRight: '8px' }}>{upcomingCampaign.emoji}</span>
-                    Coming Soon: {upcomingCampaign.name}
+                    In Focus: {upcomingCampaign.name}
                   </h2>
                   <p className={styles.campaignDescription}>
                     {upcomingCampaign.description}
