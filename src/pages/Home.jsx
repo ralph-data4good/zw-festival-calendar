@@ -24,26 +24,38 @@ function Home() {
     .sort((a, b) => new Date(a.start_datetime) - new Date(b.start_datetime))
     .slice(0, 6);
 
-  // Get the closest upcoming featured campaign (key moment)
-  const featuredCampaigns = campaigns.filter(c => c.featured);
-  const upcomingCampaign = featuredCampaigns
+  // Get ongoing and upcoming featured campaigns (key moments)
+  const featuredCampaigns = campaigns
+    .filter(c => c.featured)
     .map(c => ({
       ...c,
       startDate: new Date(c.start_date),
       endDate: new Date(c.end_date),
+      isOngoing: new Date(c.start_date) <= today && new Date(c.end_date) >= today,
+      isUpcoming: new Date(c.start_date) > today,
     }))
-    .filter(c => c.endDate >= today) // Campaign hasn't ended yet
-    .sort((a, b) => {
-      // Prioritize ongoing campaigns, then upcoming ones
-      const aIsOngoing = a.startDate <= today && a.endDate >= today;
-      const bIsOngoing = b.startDate <= today && b.endDate >= today;
-      if (aIsOngoing && !bIsOngoing) return -1;
-      if (!aIsOngoing && bIsOngoing) return 1;
-      return a.startDate - b.startDate;
-    })[0];
+    .filter(c => c.endDate >= today); // Campaign hasn't ended yet
 
-  // Get events for the featured campaign
-  const featuredCampaignEvents = upcomingCampaign
+  // Get ongoing campaign (currently active)
+  const ongoingCampaign = featuredCampaigns
+    .filter(c => c.isOngoing)
+    .sort((a, b) => a.startDate - b.startDate)[0];
+
+  // Get upcoming campaign (next to start)
+  const upcomingCampaign = featuredCampaigns
+    .filter(c => c.isUpcoming)
+    .sort((a, b) => a.startDate - b.startDate)[0];
+
+  // Get events for ongoing campaign
+  const ongoingCampaignEvents = ongoingCampaign
+    ? events
+        .filter((e) => e.campaign_id === ongoingCampaign.id)
+        .sort((a, b) => new Date(a.start_datetime) - new Date(b.start_datetime))
+        .slice(0, 6)
+    : [];
+
+  // Get events for upcoming campaign
+  const upcomingCampaignEvents = upcomingCampaign
     ? events
         .filter((e) => e.campaign_id === upcomingCampaign.id)
         .sort((a, b) => new Date(a.start_datetime) - new Date(b.start_datetime))
@@ -173,13 +185,49 @@ function Home() {
             </div>
           )}
 
-          {upcomingCampaign && featuredCampaignEvents.length > 0 && (
+          {ongoingCampaign && ongoingCampaignEvents.length > 0 && (
             <div className={styles.eventBlock}>
               <div className={styles.sectionHeader}>
-                <h2 className="h2">
-                  <span style={{ fontSize: '28px', marginRight: '8px' }}>{upcomingCampaign.emoji}</span>
-                  Featured: {upcomingCampaign.name}
-                </h2>
+                <div>
+                  <h2 className="h2">
+                    <span style={{ fontSize: '28px', marginRight: '8px' }}>{ongoingCampaign.emoji}</span>
+                    Happening Now: {ongoingCampaign.name}
+                  </h2>
+                  <p className={styles.campaignDescription}>
+                    {ongoingCampaign.description}
+                  </p>
+                </div>
+                <Link 
+                  to={`/calendar?campaign=${ongoingCampaign.id}`} 
+                  className="btn-text"
+                >
+                  View All <Icons.ChevronRight size={16} />
+                </Link>
+              </div>
+              <div className="grid grid-3">
+                {ongoingCampaignEvents.map((event) => (
+                  <EventCard
+                    key={event.id}
+                    event={event}
+                    onClick={(evt) => setSelectedEvent(evt)}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {upcomingCampaign && upcomingCampaignEvents.length > 0 && (
+            <div className={styles.eventBlock}>
+              <div className={styles.sectionHeader}>
+                <div>
+                  <h2 className="h2">
+                    <span style={{ fontSize: '28px', marginRight: '8px' }}>{upcomingCampaign.emoji}</span>
+                    Coming Soon: {upcomingCampaign.name}
+                  </h2>
+                  <p className={styles.campaignDescription}>
+                    {upcomingCampaign.description}
+                  </p>
+                </div>
                 <Link 
                   to={`/calendar?campaign=${upcomingCampaign.id}`} 
                   className="btn-text"
@@ -187,11 +235,8 @@ function Home() {
                   View All <Icons.ChevronRight size={16} />
                 </Link>
               </div>
-              <p className={styles.campaignDescription}>
-                {upcomingCampaign.description}
-              </p>
               <div className="grid grid-3">
-                {featuredCampaignEvents.map((event) => (
+                {upcomingCampaignEvents.map((event) => (
                   <EventCard
                     key={event.id}
                     event={event}
