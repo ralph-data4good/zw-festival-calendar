@@ -9,6 +9,7 @@ import styles from './Home.module.css';
 
 function Home() {
   const events = useStore((state) => state.events);
+  const campaigns = useStore((state) => state.campaigns);
   const loading = useStore((state) => state.loading);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
@@ -23,8 +24,31 @@ function Home() {
     .sort((a, b) => new Date(a.start_datetime) - new Date(b.start_datetime))
     .slice(0, 6);
 
-  // Get newly added events (last 6)
-  const newlyAdded = events.slice(-6).reverse();
+  // Get the closest upcoming featured campaign (key moment)
+  const featuredCampaigns = campaigns.filter(c => c.featured);
+  const upcomingCampaign = featuredCampaigns
+    .map(c => ({
+      ...c,
+      startDate: new Date(c.start_date),
+      endDate: new Date(c.end_date),
+    }))
+    .filter(c => c.endDate >= today) // Campaign hasn't ended yet
+    .sort((a, b) => {
+      // Prioritize ongoing campaigns, then upcoming ones
+      const aIsOngoing = a.startDate <= today && a.endDate >= today;
+      const bIsOngoing = b.startDate <= today && b.endDate >= today;
+      if (aIsOngoing && !bIsOngoing) return -1;
+      if (!aIsOngoing && bIsOngoing) return 1;
+      return a.startDate - b.startDate;
+    })[0];
+
+  // Get events for the featured campaign
+  const featuredCampaignEvents = upcomingCampaign
+    ? events
+        .filter((e) => e.campaign_id === upcomingCampaign.id)
+        .sort((a, b) => new Date(a.start_datetime) - new Date(b.start_datetime))
+        .slice(0, 6)
+    : [];
 
   if (loading) {
     return <div className="loading">Loading events...</div>;
@@ -149,16 +173,25 @@ function Home() {
             </div>
           )}
 
-          {newlyAdded.length > 0 && (
+          {upcomingCampaign && featuredCampaignEvents.length > 0 && (
             <div className={styles.eventBlock}>
               <div className={styles.sectionHeader}>
-                <h2 className="h2"><Icons.TrendingUp size={28} /> Newly Added</h2>
-                <Link to="/calendar" className="btn-text">
+                <h2 className="h2">
+                  <span style={{ fontSize: '28px', marginRight: '8px' }}>{upcomingCampaign.emoji}</span>
+                  Featured: {upcomingCampaign.name}
+                </h2>
+                <Link 
+                  to={`/calendar?campaign=${upcomingCampaign.id}`} 
+                  className="btn-text"
+                >
                   View All <Icons.ChevronRight size={16} />
                 </Link>
               </div>
+              <p className={styles.campaignDescription}>
+                {upcomingCampaign.description}
+              </p>
               <div className="grid grid-3">
-                {newlyAdded.map((event) => (
+                {featuredCampaignEvents.map((event) => (
                   <EventCard
                     key={event.id}
                     event={event}

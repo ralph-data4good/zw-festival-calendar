@@ -226,6 +226,14 @@
   margin: 0;
 }
 
+.campaignDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--ink-600);
+  margin: -16px 0 24px 0;
+  max-width: 800px;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .heroCta {

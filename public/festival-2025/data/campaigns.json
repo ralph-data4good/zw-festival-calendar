@@ -1,30 +1,50 @@
 [
   {
     "id": "izwm-2025",
-    "name": "International Zero Waste Month 2025",
+    "name": "International Zero Waste Month",
     "emoji": "🌍",
-    "description": "The flagship global campaign celebrating zero waste throughout July",
+    "description": "The flagship global campaign celebrating zero waste solutions and circular economy practices",
     "featured": true,
-    "start_date": "2025-07-01",
-    "end_date": "2025-07-31",
+    "start_date": "2025-01-01",
+    "end_date": "2025-02-28",
     "website": "https://zerowaste.asia/izwm"
   },
   {
     "id": "plastic-free-july",
     "name": "Plastic Free July",
     "emoji": "🚫",
-    "description": "Challenge yourself to refuse single-use plastics",
+    "description": "Challenge yourself to refuse single-use plastics throughout July",
     "featured": true,
     "start_date": "2025-07-01",
     "end_date": "2025-07-31",
     "website": "https://plasticfreejuly.org"
   },
   {
+    "id": "global-plastics-treaty",
+    "name": "Global Plastics Treaty",
+    "emoji": "📜",
+    "description": "International negotiations for a legally binding treaty to end plastic pollution",
+    "featured": true,
+    "start_date": "2025-10-01",
+    "end_date": "2025-10-31",
+    "website": "https://www.unep.org/plastics-treaty"
+  },
+  {
+    "id": "cop-30",
+    "name": "COP30 Climate Action",
+    "emoji": "🌡️",
+    "description": "UN Climate Change Conference focusing on climate action and waste reduction",
+    "featured": true,
+    "start_date": "2025-11-01",
+    "end_date": "2025-11-30",
+    "website": "https://unfccc.int"
+  },
+  {
     "id": "world-ocean-day",
     "name": "World Ocean Day",
     "emoji": "🌊",
     "description": "Protecting our oceans from plastic pollution",
-    "featured": true,
+    "featured": false,
     "start_date": "2025-06-08",
     "end_date": "2025-06-08",
     "website": "https://worldoceanday.org"
