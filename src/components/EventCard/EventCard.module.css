@@ -8,7 +8,7 @@
 .placeholderPoster {
   aspect-ratio: 16 / 9;
   width: 100%;
-  background: linear-gradient(135deg, var(--zw-light-blue), var(--zw-sky));
+  background: linear-gradient(135deg, var(--zw-cyan-light), var(--zw-blue-info));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +55,7 @@
 
 .organizer {
   font-size: 0.875rem;
-  color: var(--zw-dark-blue);
+  color: var(--zw-cyan);
   font-weight: 700;
 }
 

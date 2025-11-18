@@ -89,57 +89,57 @@ img {
 }
 
 .btn:focus-visible {
-  outline: 3px solid var(--accent-navy);
+  outline: 3px solid var(--accent-cyan);
   outline-offset: 2px;
 }
 
 .btn-primary {
-  background: var(--zw-light-blue);
+  background: var(--zw-burgundy);
   color: #fff;
   font-weight: 700;
 }
 
 .btn-primary:hover {
-  background: var(--zw-dark-blue);
-  box-shadow: var(--shadow-blue);
+  background: var(--zw-burgundy-hover);
+  box-shadow: var(--shadow-burgundy);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background: var(--zw-yellow);
-  color: var(--ink-900);
+  background: var(--zw-cyan);
+  color: #fff;
   font-weight: 700;
 }
 
 .btn-secondary:hover {
-  background: var(--zw-amber);
-  box-shadow: var(--shadow-yellow);
+  background: var(--zw-cyan-medium);
+  box-shadow: var(--shadow-cyan);
   transform: translateY(-2px);
 }
 
 .btn-danger {
-  background: var(--zw-red);
+  background: var(--zw-burgundy);
   color: #fff;
   font-weight: 700;
 }
 
 .btn-danger:hover {
-  background: #DC2626;
-  box-shadow: var(--shadow-red);
+  background: var(--zw-burgundy-hover);
+  box-shadow: var(--shadow-burgundy);
   transform: translateY(-2px);
 }
 
 .btn-outline {
-  border: 2px solid var(--zw-light-blue);
-  color: var(--zw-light-blue);
+  border: 2px solid var(--zw-cyan);
+  color: var(--zw-cyan);
   background: transparent;
   font-weight: 700;
 }
 
 .btn-outline:hover {
-  background: var(--zw-light-blue);
+  background: var(--zw-cyan);
   color: #fff;
-  box-shadow: var(--shadow-blue);
+  box-shadow: var(--shadow-cyan);
 }
 
 .btn-outline-white {
@@ -151,24 +151,24 @@ img {
 
 .btn-outline-white:hover {
   background: #fff;
-  color: var(--zw-dark-blue);
+  color: var(--ink-900);
 }
 
 .btn-outline-yellow {
-  border: 2px solid var(--zw-yellow);
-  color: var(--zw-yellow);
+  border: 2px solid var(--zw-cyan);
+  color: var(--zw-cyan);
   background: transparent;
   font-weight: 700;
 }
 
 .btn-outline-yellow:hover {
-  background: var(--zw-yellow);
-  color: var(--ink-900);
-  box-shadow: var(--shadow-yellow);
+  background: var(--zw-cyan);
+  color: #fff;
+  box-shadow: var(--shadow-cyan);
 }
 
 .btn-text {
-  color: var(--zw-light-blue);
+  color: var(--zw-cyan);
   text-decoration: underline;
   text-underline-offset: 3px;
   padding: 6px 12px;
@@ -180,7 +180,7 @@ img {
 
 .btn-text:hover {
   text-decoration-thickness: 2px;
-  color: var(--zw-dark-blue);
+  color: var(--ink-900);
 }
 
 /* Cards */
@@ -244,10 +244,10 @@ img {
 }
 
 .chip.active {
-  background: var(--zw-light-blue);
+  background: var(--zw-cyan);
   color: #fff;
-  border-color: var(--zw-light-blue);
-  box-shadow: var(--shadow-blue);
+  border-color: var(--zw-cyan);
+  box-shadow: var(--shadow-cyan);
   transform: scale(1.05);
 }
 

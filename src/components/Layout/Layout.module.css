@@ -39,7 +39,7 @@
   padding: 8px;
   background: none;
   border: none;
-  color: var(--izwm-brick);
+  color: var(--zw-cyan);
   cursor: pointer;
 }
 
@@ -62,13 +62,13 @@
 }
 
 .navLinks a:hover {
-  color: var(--accent-navy);
-  background: var(--izwm-cream);
+  color: var(--zw-cyan);
+  background: var(--zw-gray-light);
 }
 
 .navLinks a.active {
-  color: var(--accent-navy);
-  background: var(--izwm-cream);
+  color: var(--zw-cyan);
+  background: var(--zw-gray-light);
 }
 
 .navLinks a.active::after {
@@ -78,7 +78,7 @@
   left: 16px;
   right: 16px;
   height: 3px;
-  background: var(--accent-navy);
+  background: var(--zw-cyan);
   border-radius: 2px 2px 0 0;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .siteFooter {
-  background: var(--izwm-brick);
+  background: var(--ink-900);
   color: #fff;
   padding: 48px 0 24px;
   margin-top: 80px;

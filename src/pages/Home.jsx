@@ -78,14 +78,14 @@ function Home() {
                 Discover, register, and map activities across Asia that advance zero-waste solutions.
               </p>
               <div className={styles.heroCta}>
-                <Link to="/register" className="btn btn-secondary">
-                  <Icons.Plus size={20} /> Add Your Event
+                <Link to="/register" className="btn btn-primary">
+                  <Icons.Plus size={20} /> Add Events
                 </Link>
-                <Link to="/calendar" className="btn btn-outline-white">
-                  <Icons.Calendar size={20} /> Explore Calendar
+                <Link to="/calendar" className="btn btn-secondary">
+                  <Icons.Calendar size={20} /> Calendar
                 </Link>
-                <Link to="/map" className="btn btn-outline-white">
-                  <Icons.Map size={20} /> View Map
+                <Link to="/map" className="btn btn-secondary">
+                  <Icons.Map size={20} /> Map
                 </Link>
               </div>
             </div>
@@ -116,12 +116,25 @@ function Home() {
       {/* How It Works Section */}
       <section className={styles.howItWorks}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>How It Works</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', marginBottom: '48px' }}>
+            <div style={{ 
+              width: '64px', 
+              height: '64px', 
+              borderRadius: '50%', 
+              background: 'var(--zw-blue-info)', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center' 
+            }}>
+              <Icons.Info size={32} color="#fff" />
+            </div>
+            <h2 className={styles.sectionTitle} style={{ marginBottom: 0 }}>How To Use The Calendar</h2>
+          </div>
           <div className={styles.stepsGrid}>
             <div className={styles.step}>
-              <div className={styles.stepNumber}><Icons.Edit size={24} /></div>
+              <div className={styles.stepNumber}>1</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>Add Your Event</h3>
+                <h3 className={styles.stepTitle}>Add your Event</h3>
                 <p className={styles.stepDescription}>
                   Share your zero waste activities with our community
                 </p>
@@ -132,20 +145,20 @@ function Home() {
             </div>
 
             <div className={styles.step}>
-              <div className={styles.stepNumber}><Icons.Calendar size={24} /></div>
+              <div className={styles.stepNumber}>2</div>
               <div className={styles.stepContent}>
-                <h3 className={styles.stepTitle}>Explore the Calendar</h3>
+                <h3 className={styles.stepTitle}>Explore the Map</h3>
                 <p className={styles.stepDescription}>
                   Find events happening near you or online
                 </p>
-                <Link to="/calendar" className={styles.stepLink}>
-                  Browse Events <Icons.ChevronRight size={16} />
+                <Link to="/map" className={styles.stepLink}>
+                  Browse Map <Icons.ChevronRight size={16} />
                 </Link>
               </div>
             </div>
 
             <div className={styles.step}>
-              <div className={styles.stepNumber}><Icons.Filter size={24} /></div>
+              <div className={styles.stepNumber}>3</div>
               <div className={styles.stepContent}>
                 <h3 className={styles.stepTitle}>Filter & Subscribe</h3>
                 <p className={styles.stepDescription}>

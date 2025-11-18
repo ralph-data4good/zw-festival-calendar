@@ -65,7 +65,7 @@
 }
 
 .closeBtn:focus-visible {
-  outline: 3px solid var(--accent-navy);
+  outline: 3px solid var(--zw-cyan);
   outline-offset: 2px;
 }
 
@@ -93,7 +93,7 @@
   gap: 12px;
   margin-bottom: 24px;
   padding: 20px;
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   border-radius: var(--radius-md);
 }
 

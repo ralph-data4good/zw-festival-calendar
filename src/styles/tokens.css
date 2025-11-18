@@ -1,21 +1,23 @@
 :root {
-  /* Vibrant Brand Colors - Bold & Eye-catching */
-  --zw-dark-blue: #1E40AF;    /* Bold dark blue - primary */
-  --zw-light-blue: #3B82F6;   /* Vibrant light blue - accent */
-  --zw-yellow: #FBBF24;       /* Bright yellow - energy */
-  --zw-red: #EF4444;          /* Bold red - urgency/action */
-  --zw-cream: #F5F3ED;        /* Soft cream background */
+  /* Soft, Minimal Brand Colors */
+  --zw-cyan-light: #B8E9F5;   /* Soft cyan - hero background */
+  --zw-cyan: #00B4D8;         /* Bright cyan - secondary actions */
+  --zw-cyan-medium: #0AB4D8;  /* Medium cyan */
+  --zw-burgundy: #8B3A3A;     /* Burgundy - primary CTA */
+  --zw-burgundy-hover: #A0525C; /* Burgundy hover state */
+  --zw-green: #6BBF6B;        /* Soft green - accents */
+  --zw-cream: #FAFAFA;        /* Very light cream background */
   --zw-black: #1A1A1A;        /* Rich black for text */
   
   /* Supporting Colors */
-  --zw-sky: #60A5FA;          /* Sky blue - lighter accent */
-  --zw-amber: #F59E0B;        /* Amber - warm accent */
-  --zw-navy: #1E3A8A;         /* Deep navy */
+  --zw-blue-info: #90D5EC;    /* Light blue for info elements */
+  --zw-gray-light: #F5F5F5;   /* Light gray backgrounds */
+  --zw-gray-medium: #E8E8E8;  /* Medium gray */
   
   /* Hero Gradient Colors */
-  --izwm-navy: #1E40AF;       /* Dark blue for hero */
-  --izwm-brick: #3B82F6;      /* Light blue for hero gradient */
-  --izwm-cream: #F5F3ED;      /* Cream background */
+  --izwm-navy: #B8E9F5;       /* Soft cyan for hero */
+  --izwm-brick: #90D5EC;      /* Even lighter cyan for gradient */
+  --izwm-cream: #FAFAFA;      /* Very light cream */
   
   /* Neutral tones */
   --ink-900: #1A1A1A;
@@ -25,30 +27,30 @@
   --line-200: #E5E5E5;
   --line-100: #F5F5F5;
   
-  /* Accent colors - Vibrant palette */
-  --accent-navy: #1E40AF;     /* Dark blue - primary actions */
-  --accent-blue: #3B82F6;     /* Light blue - secondary */
-  --accent-yellow: #FBBF24;   /* Yellow - highlights */
-  --accent-red: #EF4444;      /* Red - important CTAs */
-  --accent-sky: #60A5FA;      /* Sky blue - soft accent */
+  /* Accent colors - Soft, minimal palette */
+  --accent-cyan: #00B4D8;     /* Bright cyan - secondary actions */
+  --accent-burgundy: #8B3A3A; /* Burgundy - primary CTAs */
+  --accent-green: #6BBF6B;    /* Green - success/accents */
+  --accent-blue-light: #90D5EC; /* Light blue - info */
+  --accent-info: #B8E9F5;     /* Very light blue - backgrounds */
   
-  /* Modality Chips - Colorful & Distinct */
-  --chip-hybrid: #3B82F6;     /* Light blue for hybrid */
-  --chip-inperson: #10B981;   /* Green for in-person */
-  --chip-online: #FBBF24;     /* Yellow for online */
+  /* Modality Chips - Softer palette */
+  --chip-hybrid: #00B4D8;     /* Cyan for hybrid */
+  --chip-inperson: #6BBF6B;   /* Green for in-person */
+  --chip-online: #F59E0B;     /* Orange for online */
 
-  /* Layout & Effects */
+  /* Layout & Effects - Softer shadows */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.16);
-  --shadow-blue: 0 8px 24px rgba(59, 130, 246, 0.3);
-  --shadow-yellow: 0 8px 24px rgba(251, 191, 36, 0.3);
-  --shadow-red: 0 8px 24px rgba(239, 68, 68, 0.3);
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.10);
+  --shadow-cyan: 0 4px 12px rgba(0, 180, 216, 0.15);
+  --shadow-burgundy: 0 4px 12px rgba(139, 58, 58, 0.15);
+  --shadow-green: 0 4px 12px rgba(107, 191, 107, 0.15);
 
   /* Container */
   --container: min(1200px, 92vw);

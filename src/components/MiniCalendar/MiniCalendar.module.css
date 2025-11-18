@@ -24,7 +24,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   border: none;
   font-size: 1.5rem;
   display: flex;
@@ -44,7 +44,7 @@
   width: 100%;
   padding: 8px;
   margin-bottom: 12px;
-  background: var(--accent-navy);
+  background: var(--zw-cyan);
   color: #fff;
   border: none;
   border-radius: var(--radius-md);
@@ -55,7 +55,7 @@
 }
 
 .todayBtn:hover {
-  background: #234a8e;
+  background: var(--zw-cyan-medium);
   transform: translateY(-1px);
 }
 
@@ -95,7 +95,7 @@
 }
 
 .day:hover {
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   transform: scale(1.05);
 }
 
@@ -105,23 +105,23 @@
 }
 
 .day.today {
-  background: var(--accent-sky);
+  background: var(--zw-blue-info);
   font-weight: 700;
   color: var(--ink-900);
 }
 
 .day.selected {
-  background: var(--accent-gold);
-  color: var(--ink-900);
+  background: var(--zw-cyan);
+  color: #fff;
   font-weight: 700;
-  border-color: #d4a03a;
-  box-shadow: 0 0 0 3px rgba(227, 178, 60, 0.2);
+  border-color: var(--zw-cyan-medium);
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
   transform: scale(1.05);
   z-index: 1;
 }
 
 .day.selected:hover {
-  background: #d4a03a;
+  background: var(--zw-cyan-medium);
 }
 
 .day.hasEvents::after {
@@ -132,16 +132,16 @@
   transform: translateX(-50%);
   width: 4px;
   height: 4px;
-  background: var(--accent-navy);
+  background: var(--zw-burgundy);
   border-radius: 50%;
 }
 
 .day.selected.hasEvents::after {
-  background: var(--ink-900);
+  background: #fff;
 }
 
 .day.today.hasEvents::after {
-  background: var(--accent-navy);
+  background: var(--zw-burgundy);
 }
 
 .eventDot {
@@ -168,7 +168,7 @@
 .legendDot {
   width: 4px;
   height: 4px;
-  background: var(--accent-navy);
+  background: var(--zw-burgundy);
   border-radius: 50%;
   display: block;
 }

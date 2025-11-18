@@ -59,8 +59,8 @@
 }
 
 .toggleBtn:hover {
-  background: var(--izwm-cream);
-  border-color: var(--accent-navy);
+  background: var(--zw-gray-light);
+  border-color: var(--zw-cyan);
 }
 
 .toggleBtn span:first-child {
@@ -73,7 +73,7 @@
   right: 8px;
   width: 8px;
   height: 8px;
-  background: var(--accent-gold);
+  background: var(--zw-burgundy);
   border-radius: 50%;
   animation: pulse 2s infinite;
 }
@@ -232,12 +232,12 @@
 
 .clearBtn {
   padding: 8px 14px;
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   border: 1px solid var(--line-200);
   border-radius: var(--radius-md);
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent-navy);
+  color: var(--zw-cyan);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -251,7 +251,7 @@
 .viewToggle {
   display: flex;
   gap: 4px;
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   padding: 4px;
   border-radius: var(--radius-md);
 }
@@ -277,7 +277,7 @@
 
 .viewBtnActive {
   background: #fff;
-  color: var(--accent-navy);
+  color: var(--zw-cyan);
   box-shadow: var(--shadow-sm);
 }
 
@@ -289,12 +289,12 @@
 
 /* Selected Day Section */
 .selectedDaySection {
-  background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
-  border: 2px solid var(--accent-gold);
+  background: linear-gradient(135deg, #f0f9ff 0%, #fff 100%);
+  border: 2px solid var(--zw-cyan);
   border-radius: var(--radius-xl);
   padding: 32px;
   margin-bottom: 24px;
-  box-shadow: 0 4px 20px rgba(227, 178, 60, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 180, 216, 0.15);
   animation: slideIn 0.3s ease;
 }
 
@@ -315,13 +315,13 @@
   align-items: center;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 2px solid var(--accent-gold);
+  border-bottom: 2px solid var(--zw-cyan);
 }
 
 .clearDayBtn {
   padding: 8px 16px;
   background: #fff;
-  border: 2px solid var(--accent-gold);
+  border: 2px solid var(--zw-cyan);
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 0.875rem;
@@ -331,7 +331,7 @@
 }
 
 .clearDayBtn:hover {
-  background: var(--accent-gold);
+  background: var(--zw-cyan);
   color: #fff;
   transform: translateY(-1px);
 }
@@ -370,7 +370,7 @@
   font-weight: 600;
   color: var(--ink-600);
   padding: 4px 12px;
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   border-radius: 999px;
   margin-left: 8px;
 }
@@ -382,7 +382,7 @@
   min-width: 32px;
   height: 32px;
   padding: 0 12px;
-  background: var(--accent-navy);
+  background: var(--zw-cyan);
   color: #fff;
   border-radius: 999px;
   font-size: 0.875rem;
@@ -396,25 +396,25 @@
   padding: 14px 20px;
   margin-top: 8px;
   background: #fff;
-  border: 2px solid var(--accent-navy);
+  border: 2px solid var(--zw-cyan);
   border-radius: var(--radius-lg);
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--accent-navy);
+  color: var(--zw-cyan);
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: center;
 }
 
 .seeMoreBtn:hover {
-  background: var(--accent-navy);
+  background: var(--zw-cyan);
   color: #fff;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .seeLessBtn {
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   border-color: var(--line-200);
   color: var(--ink-900);
 }
@@ -457,12 +457,12 @@
   margin: 0;
   white-space: nowrap;
   padding: 6px 16px;
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   border-radius: var(--radius-md);
 }
 
 .dateLabel.today {
-  background: var(--accent-navy);
+  background: var(--zw-cyan);
   color: #fff;
 }
 
@@ -474,7 +474,7 @@
 .noResults {
   text-align: center;
   padding: 80px 20px;
-  background: var(--izwm-cream);
+  background: var(--zw-gray-light);
   border-radius: var(--radius-xl);
   border: 2px dashed var(--line-200);
 }
