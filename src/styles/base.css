@@ -79,12 +79,13 @@ img {
   gap: 10px;
   align-items: center;
   justify-content: center;
-  padding: 12px 18px;
+  padding: 12px 24px;
   border-radius: var(--radius-md);
   font-weight: 600;
   transition: all 0.2s ease;
   min-height: 44px;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .btn:focus-visible {
@@ -98,12 +99,24 @@ img {
 }
 
 .btn-primary:hover {
-  background: #234a8e;
+  background: #3a7cb0;
   box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--zw-lime);
+  color: var(--ink-900);
+}
+
+.btn-secondary:hover {
+  background: #8fa834;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
-  border: 2px solid var(--accent-navy);
+  border: 2px solid currentColor;
   color: var(--accent-navy);
   background: transparent;
 }
@@ -113,11 +126,25 @@ img {
   color: #fff;
 }
 
+.btn-outline-white {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: var(--izwm-brick);
+}
+
 .btn-text {
   color: var(--accent-navy);
   text-decoration: underline;
   text-underline-offset: 3px;
   padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .btn-text:hover {
@@ -135,7 +162,7 @@ img {
 }
 
 .card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
