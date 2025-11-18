@@ -3,7 +3,7 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--izwm-brick) 0%, var(--izwm-navy) 100%);
+  background: linear-gradient(135deg, var(--zw-dark-blue) 0%, var(--zw-light-blue) 100%);
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -17,8 +17,8 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(164, 191, 61, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(74, 143, 199, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.15) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -76,14 +76,14 @@
   border-radius: var(--radius-xl);
   padding: clamp(28px, 5vw, 40px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
-  border: 3px solid rgba(212, 162, 61, 0.3);
+  border: 3px solid var(--zw-yellow);
 }
 
 .panelTitle {
   font-size: 1.3rem;
   font-weight: 700;
   margin: 0 0 24px 0;
-  color: var(--izwm-brick);
+  color: var(--zw-dark-blue);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -106,7 +106,7 @@
 .statValue {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
-  color: var(--accent-navy);
+  color: var(--zw-light-blue);
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -127,7 +127,7 @@
   text-align: center;
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
-  color: var(--ink-900);
+  color: var(--zw-dark-blue);
   margin: 0 0 48px 0;
 }
 
@@ -159,21 +159,34 @@
 
 .step:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-  border-color: var(--accent-navy);
+  box-shadow: 0 16px 40px rgba(59, 130, 246, 0.3);
+  border-color: var(--zw-light-blue);
 }
 
 .stepNumber {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: var(--accent-navy);
+  background: linear-gradient(135deg, var(--zw-light-blue) 0%, var(--zw-dark-blue) 100%);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(46, 91, 167, 0.3);
+  box-shadow: var(--shadow-blue);
   flex-shrink: 0;
+}
+
+/* Add special accent for first step */
+.step:first-child .stepNumber {
+  background: linear-gradient(135deg, var(--zw-red) 0%, #DC2626 100%);
+  box-shadow: var(--shadow-red);
+}
+
+/* Yellow accent for second step */
+.step:nth-child(2) .stepNumber {
+  background: linear-gradient(135deg, var(--zw-yellow) 0%, var(--zw-amber) 100%);
+  box-shadow: var(--shadow-yellow);
+  color: var(--ink-900);
 }
 
 .stepContent {
@@ -200,7 +213,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--accent-navy);
+  color: var(--zw-light-blue);
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -210,6 +223,7 @@
 .stepLink:hover {
   gap: 10px;
   text-decoration: underline;
+  color: var(--zw-dark-blue);
 }
 
 /* Events Section */
@@ -235,14 +249,16 @@
 
 .sectionHeader h2 {
   margin: 0 0 8px 0;
+  color: var(--zw-dark-blue);
 }
 
 .campaignDescription {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--ink-600);
+  color: var(--ink-700);
   margin: 0;
   max-width: 700px;
+  font-weight: 500;
 }
 
 /* Mobile Responsive */

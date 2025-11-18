@@ -78,13 +78,13 @@ function Home() {
                 Discover, register, and map activities across Asia that advance zero-waste solutions.
               </p>
               <div className={styles.heroCta}>
-                <Link to="/register" className="btn btn-primary">
+                <Link to="/register" className="btn btn-secondary">
                   <Icons.Plus size={20} /> Add Your Event
                 </Link>
-                <Link to="/calendar" className="btn btn-outline">
+                <Link to="/calendar" className="btn btn-outline-white">
                   <Icons.Calendar size={20} /> Explore Calendar
                 </Link>
-                <Link to="/map" className="btn btn-outline">
+                <Link to="/map" className="btn btn-outline-white">
                   <Icons.Map size={20} /> View Map
                 </Link>
               </div>

@@ -94,61 +94,93 @@ img {
 }
 
 .btn-primary {
-  background: var(--accent-navy);
+  background: var(--zw-light-blue);
   color: #fff;
+  font-weight: 700;
 }
 
 .btn-primary:hover {
-  background: #3a7cb0;
-  box-shadow: var(--shadow-md);
+  background: var(--zw-dark-blue);
+  box-shadow: var(--shadow-blue);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background: var(--zw-lime);
+  background: var(--zw-yellow);
   color: var(--ink-900);
+  font-weight: 700;
 }
 
 .btn-secondary:hover {
-  background: #8fa834;
-  box-shadow: var(--shadow-md);
+  background: var(--zw-amber);
+  box-shadow: var(--shadow-yellow);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: var(--zw-red);
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn-danger:hover {
+  background: #DC2626;
+  box-shadow: var(--shadow-red);
   transform: translateY(-2px);
 }
 
 .btn-outline {
-  border: 2px solid currentColor;
-  color: var(--accent-navy);
+  border: 2px solid var(--zw-light-blue);
+  color: var(--zw-light-blue);
   background: transparent;
+  font-weight: 700;
 }
 
 .btn-outline:hover {
-  background: var(--accent-navy);
+  background: var(--zw-light-blue);
   color: #fff;
+  box-shadow: var(--shadow-blue);
 }
 
 .btn-outline-white {
   border: 2px solid #fff;
   color: #fff;
   background: transparent;
+  font-weight: 700;
 }
 
 .btn-outline-white:hover {
   background: #fff;
-  color: var(--izwm-brick);
+  color: var(--zw-dark-blue);
+}
+
+.btn-outline-yellow {
+  border: 2px solid var(--zw-yellow);
+  color: var(--zw-yellow);
+  background: transparent;
+  font-weight: 700;
+}
+
+.btn-outline-yellow:hover {
+  background: var(--zw-yellow);
+  color: var(--ink-900);
+  box-shadow: var(--shadow-yellow);
 }
 
 .btn-text {
-  color: var(--accent-navy);
+  color: var(--zw-light-blue);
   text-decoration: underline;
   text-underline-offset: 3px;
   padding: 6px 12px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-weight: 600;
 }
 
 .btn-text:hover {
   text-decoration-thickness: 2px;
+  color: var(--zw-dark-blue);
 }
 
 /* Cards */
@@ -212,10 +244,11 @@ img {
 }
 
 .chip.active {
-  background: var(--zw-blue);
+  background: var(--zw-light-blue);
   color: #fff;
-  border-color: var(--zw-blue);
-  box-shadow: 0 4px 12px rgba(74, 143, 199, 0.3);
+  border-color: var(--zw-light-blue);
+  box-shadow: var(--shadow-blue);
+  transform: scale(1.05);
 }
 
 /* Hero */
